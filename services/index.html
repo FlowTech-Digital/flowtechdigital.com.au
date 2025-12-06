@@ -23,9 +23,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root{--ft-azure:#1E78FF;--ft-cyan:#00D4FF;--ft-obsidian:#0B1114;--ft-indigo:#1B3B93;--ft-white:#FFFFFF;--ft-gray-light:#F5F5F5;--ft-font-primary:'Inter',-apple-system,sans-serif;--ft-font-heading:'Space Grotesk',var(--ft-font-primary)}
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--ft-font-primary);line-height:1.6;color:var(--ft-white);background:var(--ft-obsidian)}.container{max-width:1200px;margin:0 auto;padding:0 20px}
-        nav{position:fixed;top:0;left:0;right:0;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none}.nav-logo img{height:55px;width:auto}.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
+        :root{--ft-azure:#1E78FF;--ft-cyan:#00D4FF;--ft-obsidian:#0B1114;--ft-indigo:#1B3B93;--ft-white:#FFFFFF;--ft-gray-light:#F5F5F5;--ft-font-primary:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--ft-font-heading:'Space Grotesk',var(--ft-font-primary)}
+        *{margin:0;padding:0;box-sizing:border-box}html,body{overflow-x:hidden;width:100%}body{font-family:var(--ft-font-primary);line-height:1.6;color:var(--ft-white);background:var(--ft-obsidian)}.container{max-width:1200px;margin:0 auto;padding:0 20px}
+        nav{position:fixed;top:0;left:0;right:0;width:100%;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none}.nav-logo img{height:55px;width:auto}.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
         .hero{background:linear-gradient(135deg,var(--ft-obsidian) 0%,var(--ft-indigo) 100%);color:white;padding:6rem 0 4rem;text-align:center;margin-top:73px}.hero h1{font-family:var(--ft-font-heading);font-size:2.5rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-azure) 0%,var(--ft-cyan) 50%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero p{font-size:1.2rem;margin-bottom:2rem;opacity:0.9;color:var(--ft-gray-light)}
         .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;padding:4rem 0}
         .service-card{background:rgba(30,120,255,0.08);border-radius:12px;padding:2rem;border:1px solid rgba(30,120,255,0.2);transition:transform 0.3s,box-shadow 0.3s}.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(30,120,255,0.2);border-color:rgba(30,120,255,0.4)}
@@ -35,10 +35,11 @@
         .features-list{list-style:none;margin:1.5rem 0;color:var(--ft-gray-light)}.features-list li{padding:0.5rem 0;padding-left:1.5rem;position:relative}.features-list li:before{content:"✓";position:absolute;left:0;color:var(--ft-cyan);font-weight:bold}
         .cta-button{display:inline-block;background:var(--ft-azure);color:white;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:all 0.3s;text-align:center;width:100%;margin-top:1rem}.cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,120,255,0.3)}
         .comparison-section{background:rgba(30,120,255,0.05);padding:4rem 0;margin:2rem 0}.comparison-section h2{font-family:var(--ft-font-heading);text-align:center;font-size:2rem;margin-bottom:2rem;color:var(--ft-azure)}
-        .comparison-table{width:100%;border-collapse:collapse;margin:2rem 0;background:rgba(11,17,20,0.8);box-shadow:0 4px 6px rgba(0,0,0,0.3);border-radius:12px;overflow:hidden}.comparison-table th,.comparison-table td{padding:1rem;text-align:left;border-bottom:1px solid rgba(30,120,255,0.2)}.comparison-table th{background:var(--ft-indigo);color:white;font-weight:bold}.comparison-table td{color:var(--ft-gray-light)}.comparison-table tr:last-child td{border-bottom:none}.comparison-table tr:hover td{background:rgba(30,120,255,0.05)}
+        .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2rem 0}
+        .comparison-table{width:100%;border-collapse:collapse;background:rgba(11,17,20,0.8);box-shadow:0 4px 6px rgba(0,0,0,0.3);border-radius:12px;overflow:hidden;min-width:480px}.comparison-table th,.comparison-table td{padding:1rem;text-align:left;border-bottom:1px solid rgba(30,120,255,0.2)}.comparison-table th{background:var(--ft-indigo);color:white;font-weight:bold}.comparison-table td{color:var(--ft-gray-light)}.comparison-table tr:last-child td{border-bottom:none}.comparison-table tr:hover td{background:rgba(30,120,255,0.05)}
         footer{background:rgba(11,17,20,0.95);color:white;padding:2rem;text-align:center;margin-top:4rem;border-top:1px solid rgba(30,120,255,0.1)}.footer-logo{margin-bottom:1rem}.footer-logo img{height:48px;width:auto}footer p{font-size:0.9rem;color:#6b7280;margin-bottom:0.5rem}footer a{color:var(--ft-azure);text-decoration:none}
         .delivery-tag{display:block;margin:1rem 0;color:var(--ft-cyan);font-weight:600}
-        @media(max-width:768px){nav{padding:0.75rem 1rem}.nav-content{flex-direction:column;gap:0.75rem}.nav-logo{justify-content:center}.nav-logo img{height:40px}.nav-links{width:100%;justify-content:space-evenly;font-size:0.9rem}.hero{margin-top:100px}.hero h1{font-size:2rem}.services-grid{grid-template-columns:1fr}.comparison-table{font-size:0.875rem}.comparison-table th,.comparison-table td{padding:0.5rem}}
+        @media(max-width:768px){nav{padding:0.75rem 1rem}.nav-content{flex-direction:column;gap:0.75rem;align-items:center;text-align:center}.nav-logo{justify-content:center;width:100%}.nav-logo img{height:40px}.nav-links{width:100%;justify-content:center;gap:1.5rem;font-size:0.9rem}.hero{margin-top:100px;padding:4rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.services-grid{grid-template-columns:1fr;padding:2rem 0}.service-card{padding:1.5rem}.comparison-section{padding:2rem 0}.table-wrapper{margin:1rem -10px;padding:0 10px}.comparison-table{font-size:0.8rem;min-width:400px}.comparison-table th,.comparison-table td{padding:0.5rem 0.4rem}}
     </style>
 </head>
 <body>
@@ -87,18 +88,20 @@
         </div>
     </section>
     <section class="comparison-section"><div class="container"><h2>Package Comparison</h2>
+        <div class="table-wrapper">
         <table class="comparison-table"><thead><tr><th>Feature</th><th>Starter</th><th>Growth</th><th>Premium</th></tr></thead>
         <tbody>
             <tr><td><strong>Setup Fee</strong></td><td>$1,000</td><td>$2,000</td><td>$5,000</td></tr>
-            <tr><td><strong>Monthly Fee</strong></td><td>$200/month</td><td>$500/month</td><td>$1,000/month</td></tr>
-            <tr><td><strong>Website Pages</strong></td><td>5 pages</td><td>10 pages</td><td>15+ pages (custom)</td></tr>
+            <tr><td><strong>Monthly Fee</strong></td><td>$200/mo</td><td>$500/mo</td><td>$1,000/mo</td></tr>
+            <tr><td><strong>Website Pages</strong></td><td>5 pages</td><td>10 pages</td><td>15+ custom</td></tr>
             <tr><td><strong>Blog Posts</strong></td><td>-</td><td>2/month</td><td>4/month</td></tr>
-            <tr><td><strong>Social Media</strong></td><td>-</td><td>2 posts/week</td><td>5 posts/week</td></tr>
+            <tr><td><strong>Social Media</strong></td><td>-</td><td>2/week</td><td>5/week</td></tr>
             <tr><td><strong>Email Marketing</strong></td><td>-</td><td>1/month</td><td>4/month</td></tr>
             <tr><td><strong>Website Updates</strong></td><td>1/month</td><td>3/month</td><td>Unlimited</td></tr>
-            <tr><td><strong>Support Response</strong></td><td>48 hours</td><td>24 hours</td><td>4 hours (VIP)</td></tr>
+            <tr><td><strong>Support Response</strong></td><td>48 hrs</td><td>24 hrs</td><td>4 hrs VIP</td></tr>
             <tr><td><strong>Commitment</strong></td><td>3 months</td><td>6 months</td><td>12 months</td></tr>
         </tbody></table>
+        </div>
     </div></section>
     <footer>
       <div class="footer-logo">
