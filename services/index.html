@@ -25,21 +25,20 @@
     <style>
         :root{--ft-azure:#1E78FF;--ft-cyan:#00D4FF;--ft-obsidian:#0B1114;--ft-indigo:#1B3B93;--ft-white:#FFFFFF;--ft-gray-light:#F5F5F5;--ft-font-primary:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--ft-font-heading:'Space Grotesk',var(--ft-font-primary)}
         *{margin:0;padding:0;box-sizing:border-box}html,body{overflow-x:hidden;width:100%}body{font-family:var(--ft-font-primary);line-height:1.6;color:var(--ft-white);background:var(--ft-obsidian)}.container{max-width:1200px;margin:0 auto;padding:0 20px}
-        nav{position:fixed;top:0;left:0;right:0;width:100%;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none}.nav-logo img{height:55px;width:auto}.nav-links{display:flex;gap:2rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
+        nav{position:fixed;top:0;left:0;right:0;width:100%;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none}.nav-logo img{height:55px;width:auto}.nav-links{display:flex;gap:3rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
         .hero{background:linear-gradient(135deg,var(--ft-obsidian) 0%,var(--ft-indigo) 100%);color:white;padding:6rem 0 4rem;text-align:center;margin-top:73px}.hero h1{font-family:var(--ft-font-heading);font-size:2.5rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-azure) 0%,var(--ft-cyan) 50%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero p{font-size:1.2rem;margin-bottom:2rem;opacity:0.9;color:var(--ft-gray-light)}
         .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;padding:4rem 0}
-        .service-card{background:rgba(30,120,255,0.08);border-radius:12px;padding:2rem;border:1px solid rgba(30,120,255,0.2);transition:transform 0.3s,box-shadow 0.3s}.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(30,120,255,0.2);border-color:rgba(30,120,255,0.4)}
-        .service-badge{display:inline-block;padding:0.5rem 1rem;border-radius:20px;font-size:0.875rem;font-weight:bold;margin-bottom:1rem}.badge-starter{background:#fbbf24;color:#78350f}.badge-growth{background:#34d399;color:#065f46}.badge-premium{background:#a78bfa;color:#4c1d95}
+        .service-card{background:rgba(30,120,255,0.08);border-radius:12px;padding:2rem;border:1px solid rgba(30,120,255,0.2);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(30,120,255,0.2);border-color:rgba(30,120,255,0.4)}
+        .service-badge{display:inline-block;padding:0.5rem 1rem;border-radius:20px;font-size:0.875rem;font-weight:bold;margin-bottom:1rem;align-self:flex-start}.badge-starter{background:#fbbf24;color:#78350f}.badge-growth{background:#34d399;color:#065f46}.badge-premium{background:#a78bfa;color:#4c1d95}
         .service-card h2{font-family:var(--ft-font-heading);font-size:1.75rem;margin-bottom:0.5rem;color:var(--ft-azure)}.service-subtitle{color:var(--ft-gray-light);font-size:1rem;margin-bottom:1.5rem}
         .pricing{margin:1.5rem 0;padding:1.5rem;background:rgba(30,120,255,0.1);border-radius:8px;border-left:4px solid var(--ft-azure)}.price-setup{font-size:1.5rem;font-weight:bold;color:var(--ft-azure);margin-bottom:0.5rem}.price-monthly{font-size:1.25rem;color:var(--ft-gray-light)}
-        .features-list{list-style:none;margin:1.5rem 0;color:var(--ft-gray-light)}.features-list li{padding:0.5rem 0;padding-left:1.5rem;position:relative}.features-list li:before{content:"✓";position:absolute;left:0;color:var(--ft-cyan);font-weight:bold}
-        .cta-button{display:inline-block;background:var(--ft-azure);color:white;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:all 0.3s;text-align:center;width:100%;margin-top:1rem}.cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,120,255,0.3)}
+        .features-list{list-style:none;margin:1.5rem 0;color:var(--ft-gray-light);flex-grow:1}.features-list li{padding:0.5rem 0;padding-left:1.5rem;position:relative}.features-list li:before{content:"✓";position:absolute;left:0;color:var(--ft-cyan);font-weight:bold}
+        .card-footer{margin-top:auto}.delivery-tag{display:block;margin:1rem 0;color:var(--ft-cyan);font-weight:600}.cta-button{display:inline-block;background:var(--ft-azure);color:white;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:all 0.3s;text-align:center;width:100%}.cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,120,255,0.3)}
         .comparison-section{background:rgba(30,120,255,0.05);padding:4rem 0;margin:2rem 0}.comparison-section h2{font-family:var(--ft-font-heading);text-align:center;font-size:2rem;margin-bottom:2rem;color:var(--ft-azure)}
         .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2rem 0}
         .comparison-table{width:100%;border-collapse:collapse;background:rgba(11,17,20,0.8);box-shadow:0 4px 6px rgba(0,0,0,0.3);border-radius:12px;overflow:hidden;min-width:480px}.comparison-table th,.comparison-table td{padding:1rem;text-align:left;border-bottom:1px solid rgba(30,120,255,0.2)}.comparison-table th{background:var(--ft-indigo);color:white;font-weight:bold}.comparison-table td{color:var(--ft-gray-light)}.comparison-table tr:last-child td{border-bottom:none}.comparison-table tr:hover td{background:rgba(30,120,255,0.05)}
         footer{background:rgba(11,17,20,0.95);color:white;padding:2rem;text-align:center;margin-top:4rem;border-top:1px solid rgba(30,120,255,0.1)}.footer-logo{margin-bottom:1rem}.footer-logo img{height:48px;width:auto}footer p{font-size:0.9rem;color:#6b7280;margin-bottom:0.5rem}footer a{color:var(--ft-azure);text-decoration:none}
-        .delivery-tag{display:block;margin:1rem 0;color:var(--ft-cyan);font-weight:600}
-        @media(max-width:768px){nav{padding:0.75rem 1rem}.nav-content{flex-direction:column;gap:0.75rem}.nav-logo{justify-content:center}.nav-logo img{height:40px}.nav-links{width:100%;justify-content:space-evenly;font-size:0.9rem}.hero{margin-top:100px;padding:4rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.services-grid{grid-template-columns:1fr;padding:2rem 0}.service-card{padding:1.5rem}.comparison-section{padding:2rem 0}.table-wrapper{margin:1rem -10px;padding:0 10px}.comparison-table{font-size:0.8rem;min-width:400px}.comparison-table th,.comparison-table td{padding:0.5rem 0.4rem}}
+        @media(max-width:768px){nav{padding:0.75rem 1rem}.nav-content{flex-direction:column;gap:0.75rem}.nav-logo{justify-content:center}.nav-logo img{height:40px}.nav-links{width:100%;justify-content:space-evenly;font-size:0.9rem;gap:1.5rem}.hero{margin-top:100px;padding:4rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.services-grid{grid-template-columns:1fr;padding:2rem 0}.service-card{padding:1.5rem}.comparison-section{padding:2rem 0}.table-wrapper{margin:1rem -10px;padding:0 10px}.comparison-table{font-size:0.8rem;min-width:400px}.comparison-table th,.comparison-table td{padding:0.5rem 0.4rem}}
     </style>
 </head>
 <body>
@@ -64,8 +63,10 @@
                 <p class="service-subtitle">Perfect for solopreneurs and service businesses launching online</p>
                 <div class="pricing"><div class="price-setup">$1,000 Setup</div><div class="price-monthly">$200/month</div><small style="color:#6b7280;">3-month minimum commitment</small></div>
                 <ul class="features-list"><li>Professional 5-page website</li><li>Google Business Profile optimization</li><li>Basic SEO foundation</li><li>CloudFlare hosting &amp; security</li><li>1 content update per month</li><li>Monthly performance report</li><li>Email support (48-hour response)</li></ul>
-                <span class="delivery-tag">Delivery: 5-7 business days</span>
-                <a href="https://buy.stripe.com/5kQbJ3bnK3ci0I7fU593y06" class="cta-button">Get Started</a>
+                <div class="card-footer">
+                    <span class="delivery-tag">Delivery: 5-7 business days</span>
+                    <a href="https://buy.stripe.com/5kQbJ3bnK3ci0I7fU593y06" class="cta-button">Get Started</a>
+                </div>
             </div>
             <div class="service-card">
                 <span class="service-badge badge-growth">GROWTH</span>
@@ -73,8 +74,10 @@
                 <p class="service-subtitle">For established small businesses ready to scale online</p>
                 <div class="pricing"><div class="price-setup">$2,000 Setup</div><div class="price-monthly">$500/month</div><small style="color:#6b7280;">6-month minimum commitment</small></div>
                 <ul class="features-list"><li>Professional 10-page website</li><li>Comprehensive SEO strategy</li><li>2 SEO-optimized blog posts/month</li><li>Social media (2 posts/week)</li><li>Email newsletter (1/month)</li><li>3 website updates per month</li><li>Priority support (24-hour response)</li></ul>
-                <span class="delivery-tag">Delivery: 7-10 business days</span>
-                <a href="https://buy.stripe.com/6oUaEZezWeV03Uj6jv93y07" class="cta-button">Get Started</a>
+                <div class="card-footer">
+                    <span class="delivery-tag">Delivery: 7-10 business days</span>
+                    <a href="https://buy.stripe.com/6oUaEZezWeV03Uj6jv93y07" class="cta-button">Get Started</a>
+                </div>
             </div>
             <div class="service-card">
                 <span class="service-badge badge-premium">PREMIUM</span>
@@ -82,8 +85,10 @@
                 <p class="service-subtitle">Complete digital presence outsourcing for established businesses</p>
                 <div class="pricing"><div class="price-setup">$5,000 Setup</div><div class="price-monthly">$1,000/month</div><small style="color:#6b7280;">12-month minimum commitment</small></div>
                 <ul class="features-list"><li>Custom 15+ page website</li><li>Advanced SEO + PPC campaigns</li><li>4 SEO-optimized blog posts/month</li><li>Full social media (5 posts/week)</li><li>Weekly email campaigns (4/month)</li><li>Unlimited website updates</li><li>VIP support (4-hour response)</li></ul>
-                <span class="delivery-tag">Delivery: 10-14 business days</span>
-                <a href="https://buy.stripe.com/00w00lezWeV0duTazL93y08" class="cta-button">Get Started</a>
+                <div class="card-footer">
+                    <span class="delivery-tag">Delivery: 10-14 business days</span>
+                    <a href="https://buy.stripe.com/00w00lezWeV0duTazL93y08" class="cta-button">Get Started</a>
+                </div>
             </div>
         </div>
     </section>
