@@ -42,7 +42,7 @@
     <main class="form-container">
         <h1>Start Your Project</h1>
         <p class="intro">Tell us about your business and goals. We'll review your submission and get back to you within 24-48 hours with a custom quote.</p>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
+        <form id="intake-form" action="https://formspree.io/f/xpwzgkvr" method="POST">
             <div class="form-section">
                 <h2>Contact Information</h2>
                 <div class="form-group"><label for="name">Full Name <span class="required">*</span></label><input type="text" id="name" name="name" required placeholder="John Smith"></div>
@@ -81,5 +81,44 @@
       <p>&copy; 2025 FlowTech Digital Solutions. ABN 76 689 878 420</p>
       <p><a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a> | <a href="mailto:hello@flowtechdigital.com.au">hello@flowtechdigital.com.au</a></p>
     </footer>
+
+    <!-- GA4 Conversion Event Tracking -->
+    <script>
+    (function() {
+        var form = document.getElementById('intake-form');
+        var qualifyLeadFired = false;
+
+        // qualify_lead: Fire once on first form field interaction
+        form.addEventListener('focusin', function(e) {
+            if (!qualifyLeadFired && (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA')) {
+                gtag('event', 'qualify_lead', {
+                    'event_category': 'lead',
+                    'event_label': 'intake_form_engagement'
+                });
+                qualifyLeadFired = true;
+                console.log('GA4 Event: qualify_lead fired');
+            }
+        });
+
+        // close_convert_lead: Fire on form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            gtag('event', 'close_convert_lead', {
+                'event_category': 'lead',
+                'event_label': 'intake_form_submission',
+                'event_callback': function() {
+                    console.log('GA4 Event: close_convert_lead fired');
+                    form.submit();
+                }
+            });
+
+            // Fallback submit after 1 second if gtag callback doesn't fire
+            setTimeout(function() {
+                form.submit();
+            }, 1000);
+        });
+    })();
+    </script>
 </body>
 </html>
