@@ -1,0 +1,32 @@
+name: Deploy to CloudFlare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Deploy to CloudFlare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name=flowtechdigital-com-au --commit-dirty=true
+      
+      - name: Deployment Summary
+        run: |
+          echo "## Deployment Complete ✅" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Project:** flowtechdigital-com-au" >> $GITHUB_STEP_SUMMARY
+          echo "- **URL:** https://flowtechdigital.com.au" >> $GITHUB_STEP_SUMMARY
