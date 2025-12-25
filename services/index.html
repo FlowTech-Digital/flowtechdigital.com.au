@@ -30,16 +30,18 @@
         .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;padding:4rem 0}
         .service-card{background:rgba(30,120,255,0.08);border-radius:12px;padding:2rem;border:1px solid rgba(30,120,255,0.2);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(30,120,255,0.2);border-color:rgba(30,120,255,0.4)}
         .service-badge{display:inline-block;padding:0.5rem 1rem;border-radius:20px;font-size:0.875rem;font-weight:bold;margin-bottom:1rem;align-self:flex-start}.badge-starter{background:#fbbf24;color:#78350f}.badge-growth{background:#34d399;color:#065f46}.badge-premium{background:#a78bfa;color:#4c1d95}.badge-ai{background:linear-gradient(135deg,#00D4FF 0%,#1E78FF 100%);color:#FFFFFF}.badge-ai-pro{background:linear-gradient(135deg,#1E78FF 0%,#a78bfa 100%);color:#FFFFFF}.badge-ai-enterprise{background:linear-gradient(135deg,#a78bfa 0%,#ec4899 100%);color:#FFFFFF}
-        .service-card h2{font-family:var(--ft-font-heading);font-size:1.75rem;margin-bottom:0.5rem;color:var(--ft-azure)}.service-subtitle{color:var(--ft-gray-light);font-size:1rem;margin-bottom:1.5rem}
+        .service-card h2{font-family:var(--ft-font-heading);font-size:1.75rem;margin-bottom:0.5rem;color:var(--ft-azure)}.service-subtitle{color:var(--ft-gray-light);font-size:1rem;margin-bottom:1.5rem;min-height:48px}
         .pricing{margin:1.5rem 0;padding:1.5rem;background:rgba(30,120,255,0.1);border-radius:8px;border-left:4px solid var(--ft-azure)}.price-main{font-size:2rem;font-weight:bold;color:var(--ft-azure);margin-bottom:0.25rem}.price-note{font-size:0.9rem;color:var(--ft-gray-light)}
+        .ai-section .pricing{background:rgba(0,212,255,0.1);border-left:4px solid var(--ft-cyan)}.ai-section .price-main{color:var(--ft-cyan)}
         .features-list{list-style:none;margin:1.5rem 0;color:var(--ft-gray-light);flex-grow:1}.features-list li{padding:0.5rem 0;padding-left:1.5rem;position:relative}.features-list li:before{content:"✓";position:absolute;left:0;color:var(--ft-cyan);font-weight:bold}
         .card-footer{margin-top:auto}.delivery-tag{display:block;margin:1rem 0;color:var(--ft-cyan);font-weight:600}.cta-button{display:inline-block;background:var(--ft-azure);color:white;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:all 0.3s;text-align:center;width:100%}.cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,120,255,0.3)}.cta-button-ai{background:linear-gradient(135deg,#00D4FF 0%,#1E78FF 100%)}.cta-button-ai:hover{box-shadow:0 8px 20px rgba(0,212,255,0.4)}
         .comparison-section{background:rgba(30,120,255,0.05);padding:4rem 0;margin:2rem 0}.comparison-section h2{font-family:var(--ft-font-heading);text-align:center;font-size:2rem;margin-bottom:2rem;color:var(--ft-azure)}
         .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2rem 0}
         .comparison-table{width:100%;border-collapse:collapse;background:rgba(11,17,20,0.8);box-shadow:0 4px 6px rgba(0,0,0,0.3);border-radius:12px;overflow:hidden;min-width:480px}.comparison-table th,.comparison-table td{padding:1rem;text-align:left;border-bottom:1px solid rgba(30,120,255,0.2)}.comparison-table th{background:var(--ft-indigo);color:white;font-weight:bold}.comparison-table td{color:var(--ft-gray-light)}.comparison-table tr:last-child td{border-bottom:none}.comparison-table tr:hover td{background:rgba(30,120,255,0.05)}
         .ai-section{background:linear-gradient(135deg,rgba(0,212,255,0.1) 0%,rgba(30,120,255,0.1) 100%);padding:4rem 0;margin:2rem 0;border-top:1px solid rgba(0,212,255,0.3);border-bottom:1px solid rgba(0,212,255,0.3)}.ai-section h2{font-family:var(--ft-font-heading);text-align:center;font-size:2rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-cyan) 0%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.ai-section .section-intro{text-align:center;color:var(--ft-gray-light);margin-bottom:2rem;max-width:800px;margin-left:auto;margin-right:auto}
+        .ai-section .service-card h2{color:var(--ft-cyan)}
         footer{background:rgba(11,17,20,0.95);color:white;padding:2rem;text-align:center;margin-top:4rem;border-top:1px solid rgba(30,120,255,0.1)}.footer-logo{margin-bottom:1rem}.footer-logo img{height:64px;width:auto}footer p{font-size:0.9rem;color:#6b7280;margin-bottom:0.5rem}footer a{color:var(--ft-azure);text-decoration:none}
-        @media(max-width:768px){nav{padding:0.75rem 1rem}.nav-content{flex-direction:column;gap:0.75rem}.nav-logo{justify-content:center}.nav-logo img{height:40px}.nav-links{width:100%;justify-content:space-evenly;font-size:0.9rem;gap:1.5rem}.hero{margin-top:100px;padding:4rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.services-grid{grid-template-columns:1fr;padding:2rem 0}.service-card{padding:1.5rem}.comparison-section{padding:2rem 0}.table-wrapper{margin:1rem -10px;padding:0 10px}.comparison-table{font-size:0.8rem;min-width:400px}.comparison-table th,.comparison-table td{padding:0.5rem 0.4rem}}
+        @media(max-width:768px){nav{padding:0.75rem 1rem}.nav-content{flex-direction:column;gap:0.75rem}.nav-logo{justify-content:center}.nav-logo img{height:40px}.nav-links{width:100%;justify-content:space-evenly;font-size:0.9rem;gap:1.5rem}.hero{margin-top:100px;padding:4rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.services-grid{grid-template-columns:1fr;padding:2rem 0}.service-card{padding:1.5rem}.service-subtitle{min-height:auto}.comparison-section{padding:2rem 0}.table-wrapper{margin:1rem -10px;padding:0 10px}.comparison-table{font-size:0.8rem;min-width:400px}.comparison-table th,.comparison-table td{padding:0.5rem 0.4rem}}
     </style>
 </head>
 <body>
@@ -62,8 +64,19 @@
                 <span class="service-badge badge-starter">STARTER</span>
                 <h2>Digital Presence Essentials</h2>
                 <p class="service-subtitle">Perfect for solopreneurs and service businesses launching online</p>
-                <div class="pricing"><div class="price-main">$1,000</div><div class="price-note">One-time fee</div></div>
-                <ul class="features-list"><li>Professional 5-page website</li><li>Google Business Profile optimization</li><li>Basic SEO foundation</li><li>CloudFlare hosting &amp; security</li><li>1 content update per month</li><li>Monthly performance report</li><li>Email support (48-hour response)</li></ul>
+                <div class="pricing">
+                    <div class="price-main">$1,000</div>
+                    <div class="price-note">One-time fee</div>
+                </div>
+                <ul class="features-list">
+                    <li>Professional 5-page website</li>
+                    <li>Google Business Profile optimization</li>
+                    <li>Basic SEO foundation</li>
+                    <li>CloudFlare hosting &amp; security</li>
+                    <li>1 content update per month</li>
+                    <li>Monthly performance report</li>
+                    <li>Email support (48-hour response)</li>
+                </ul>
                 <div class="card-footer">
                     <span class="delivery-tag">Delivery: 5-7 business days</span>
                     <a href="https://buy.stripe.com/5kQbJ3bnK3ci0I7fU593y06" class="cta-button">Get Started - $1,000</a>
@@ -73,8 +86,19 @@
                 <span class="service-badge badge-growth">GROWTH</span>
                 <h2>Digital Marketing Accelerator</h2>
                 <p class="service-subtitle">For established small businesses ready to scale online</p>
-                <div class="pricing"><div class="price-main">$2,000</div><div class="price-note">One-time fee</div></div>
-                <ul class="features-list"><li>Professional 10-page website</li><li>Comprehensive SEO strategy</li><li>2 SEO-optimized blog posts/month</li><li>Social media (2 posts/week)</li><li>Email newsletter (1/month)</li><li>3 website updates per month</li><li>Priority support (24-hour response)</li></ul>
+                <div class="pricing">
+                    <div class="price-main">$2,000</div>
+                    <div class="price-note">One-time fee</div>
+                </div>
+                <ul class="features-list">
+                    <li>Professional 10-page website</li>
+                    <li>Comprehensive SEO strategy</li>
+                    <li>2 SEO-optimized blog posts/month</li>
+                    <li>Social media (2 posts/week)</li>
+                    <li>Email newsletter (1/month)</li>
+                    <li>3 website updates per month</li>
+                    <li>Priority support (24-hour response)</li>
+                </ul>
                 <div class="card-footer">
                     <span class="delivery-tag">Delivery: 7-10 business days</span>
                     <a href="https://buy.stripe.com/6oUaEZezWeV03Uj6jv93y07" class="cta-button">Get Started - $2,000</a>
@@ -84,8 +108,19 @@
                 <span class="service-badge badge-premium">PREMIUM</span>
                 <h2>Full-Service Digital Operations</h2>
                 <p class="service-subtitle">Complete digital presence outsourcing for established businesses</p>
-                <div class="pricing"><div class="price-main">$5,000</div><div class="price-note">One-time fee</div></div>
-                <ul class="features-list"><li>Custom 15+ page website</li><li>Advanced SEO + PPC campaigns</li><li>4 SEO-optimized blog posts/month</li><li>Full social media (5 posts/week)</li><li>Weekly email campaigns (4/month)</li><li>Unlimited website updates</li><li>VIP support (4-hour response)</li></ul>
+                <div class="pricing">
+                    <div class="price-main">$5,000</div>
+                    <div class="price-note">One-time fee</div>
+                </div>
+                <ul class="features-list">
+                    <li>Custom 15+ page website</li>
+                    <li>Advanced SEO + PPC campaigns</li>
+                    <li>4 SEO-optimized blog posts/month</li>
+                    <li>Full social media (5 posts/week)</li>
+                    <li>Weekly email campaigns (4/month)</li>
+                    <li>Unlimited website updates</li>
+                    <li>VIP support (4-hour response)</li>
+                </ul>
                 <div class="card-footer">
                     <span class="delivery-tag">Delivery: 10-14 business days</span>
                     <a href="https://buy.stripe.com/00w00lezWeV0duTazL93y08" class="cta-button">Get Started - $5,000</a>
@@ -104,7 +139,10 @@
                     <span class="service-badge badge-ai">STARTER</span>
                     <h2>Single AI Persona</h2>
                     <p class="service-subtitle">Launch your first AI influencer with a consistent brand presence</p>
-                    <div class="pricing"><div class="price-main">$499</div><div class="price-note">One-time creation fee</div></div>
+                    <div class="pricing">
+                        <div class="price-main">$499</div>
+                        <div class="price-note">One-time creation fee</div>
+                    </div>
                     <ul class="features-list">
                         <li>1 custom AI influencer persona</li>
                         <li>Character backstory &amp; voice guide</li>
@@ -123,7 +161,10 @@
                     <span class="service-badge badge-ai-pro">PROFESSIONAL</span>
                     <h2>Full Persona Package</h2>
                     <p class="service-subtitle">Complete AI influencer with expanded content library</p>
-                    <div class="pricing"><div class="price-main">$999</div><div class="price-note">One-time creation fee</div></div>
+                    <div class="pricing">
+                        <div class="price-main">$999</div>
+                        <div class="price-note">One-time creation fee</div>
+                    </div>
                     <ul class="features-list">
                         <li>1 custom AI influencer persona</li>
                         <li>Complete character backstory &amp; voice</li>
@@ -143,7 +184,10 @@
                     <span class="service-badge badge-ai-enterprise">ENTERPRISE</span>
                     <h2>Multi-Persona Strategy</h2>
                     <p class="service-subtitle">Build an AI influencer network targeting different audiences</p>
-                    <div class="pricing"><div class="price-main">$1,999</div><div class="price-note">One-time creation fee</div></div>
+                    <div class="pricing">
+                        <div class="price-main">$1,999</div>
+                        <div class="price-note">One-time creation fee</div>
+                    </div>
                     <ul class="features-list">
                         <li>Up to 3 AI influencer personas</li>
                         <li>Unique visual style per persona</li>
