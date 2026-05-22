@@ -26,7 +26,7 @@ FlowTech Digital Solutions provides professional digital transformation services
 
 - **Hosting**: CloudFlare Pages
 - **DNS**: CloudFlare
-- **Analytics**: Google Analytics 4 (G-W5CR0RS960)
+- **Analytics**: Google Analytics 4 (G-YKCSTGFCJH)
 - **Repository**: GitHub (FlowTech-Digital org)
 
 ## Contact
