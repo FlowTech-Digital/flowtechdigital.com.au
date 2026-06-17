@@ -24,7 +24,7 @@
     <style>
         :root{--ft-azure:#1E78FF;--ft-cyan:#38CFFF;--ft-obsidian:#0B1114;--ft-ink:#1A2230;--ft-slate:#5B6675;--ft-mist:#E7ECF2;--ft-indigo:#0A3D91;--ft-white:#FFFFFF;--ft-gray-light:#F5F5F5;--ft-font-primary:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--ft-font-heading:'IBM Plex Sans',var(--ft-font-primary)}
         *{margin:0;padding:0;box-sizing:border-box}html,body{overflow-x:hidden;width:100%}body{font-family:var(--ft-font-primary);line-height:1.6;color:var(--ft-white);background:var(--ft-obsidian)}.container{max-width:1200px;margin:0 auto;padding:0 20px}
-        nav{position:fixed;top:0;left:0;right:0;width:100%;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none}.nav-logo img{height:55px;width:auto}.nav-links{display:flex;gap:3rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
+        nav{position:fixed;top:0;left:0;right:0;width:100%;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none;gap:.6rem}.nav-logo img.nav-mark{height:42px;width:auto}.nav-wm{font-family:'Michroma',sans-serif;font-size:1.05rem;letter-spacing:.12em;color:var(--ft-mist);white-space:nowrap;line-height:1}.nav-wm .wm-suffix{color:var(--ft-azure)}.nav-links{display:flex;gap:3rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
         .hero{background:linear-gradient(135deg,var(--ft-obsidian) 0%,var(--ft-indigo) 100%);color:white;padding:6rem 0 4rem;text-align:center;margin-top:73px}.hero h1{font-family:var(--ft-font-heading);font-size:2.5rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-azure) 0%,var(--ft-cyan) 50%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero p{font-size:1.2rem;margin-bottom:1rem;opacity:0.9;color:var(--ft-gray-light)}
         .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding:2rem 0 3rem}
         .service-card{background:rgba(30,120,255,0.08);border-radius:12px;padding:2rem;border:1px solid rgba(30,120,255,0.2);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(30,120,255,0.2);border-color:rgba(30,120,255,0.4)}
@@ -33,7 +33,7 @@
         .service-subtitle{color:var(--ft-gray-light);font-size:1rem;margin-bottom:0;min-height:52px}
         .pricing{padding:1.5rem;background:rgba(30,120,255,0.1);border-radius:8px;border-left:4px solid var(--ft-azure)}.price-main{font-size:2rem;font-weight:bold;color:var(--ft-azure);margin-bottom:0.25rem}.price-note{font-size:0.9rem;color:var(--ft-gray-light)}
         .ai-section .pricing{background:rgba(56,207,255,0.1);border-left:4px solid var(--ft-cyan)}.ai-section .price-main{color:var(--ft-cyan)}
-        .features-list{list-style:none;margin:1.5rem 0;color:var(--ft-gray-light);flex-grow:1}.features-list li{padding:0.5rem 0;padding-left:1.5rem;position:relative}.features-list li:before{content:"✓";position:absolute;left:0;color:var(--ft-cyan);font-weight:bold}
+        .features-list{list-style:none;margin:1.5rem 0;color:var(--ft-gray-light);flex-grow:1}.features-list li{padding:0.5rem 0;padding-left:1.5rem;position:relative}.features-list li:before{content:"\2713";position:absolute;left:0;color:var(--ft-cyan);font-weight:bold}
         .card-footer{margin-top:auto}.delivery-tag{display:block;margin:1rem 0;color:var(--ft-cyan);font-weight:600}.cta-button{display:inline-block;background:var(--ft-azure);color:white;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:all 0.3s;text-align:center;width:100%}.cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,120,255,0.3)}.cta-button-ai{background:linear-gradient(135deg,#38CFFF 0%,#1E78FF 100%)}.cta-button-ai:hover{box-shadow:0 8px 20px rgba(56,207,255,0.4)}
         .comparison-section{background:rgba(30,120,255,0.05);padding:3rem 0;margin:1rem 0 0}.comparison-section h3{font-family:var(--ft-font-heading);text-align:center;font-size:1.5rem;margin-bottom:2rem;color:var(--ft-azure)}
         .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2rem 0}
@@ -41,8 +41,7 @@
         .ai-section{background:linear-gradient(135deg,rgba(56,207,255,0.1) 0%,rgba(30,120,255,0.1) 100%);padding:4rem 0;margin:2rem 0;border-top:1px solid rgba(56,207,255,0.3);border-bottom:1px solid rgba(56,207,255,0.3)}.ai-section .section-header{text-align:center;margin-bottom:3rem}.ai-section .section-title{font-family:var(--ft-font-heading);font-size:2.5rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-cyan) 0%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;min-height:auto;display:block}.ai-section .section-intro{font-size:1.2rem;color:var(--ft-gray-light);max-width:800px;margin-left:auto;margin-right:auto;opacity:0.9}
         .ai-section .service-card h2{color:var(--ft-cyan)}
         .section-link{text-align:center;margin-top:2rem}.section-link a{color:var(--ft-cyan);text-decoration:none;font-weight:600;font-size:1.1rem;transition:color 0.3s}.section-link a:hover{color:var(--ft-azure)}
-        footer{background:rgba(11,17,20,0.95);color:white;padding:2rem;text-align:center;margin-top:4rem;border-top:1px solid rgba(30,120,255,0.1)}.footer-logo{margin-bottom:1rem}.footer-logo img{height:64px;width:auto}footer p{font-size:0.9rem;color:#6b7280;margin-bottom:0.5rem}footer a{color:var(--ft-azure);text-decoration:none}
-        /* --- restructure additions --- */
+        footer{background:rgba(11,17,20,0.95);color:white;padding:2rem;text-align:center;margin-top:4rem;border-top:1px solid rgba(30,120,255,0.1)}footer p{font-size:0.9rem;color:#6b7280;margin-bottom:0.5rem}footer a{color:var(--ft-azure);text-decoration:none}
         .model-banner{display:inline-block;margin:0.5rem auto 0;padding:0.5rem 1.25rem;border:1px solid rgba(56,207,255,0.4);border-radius:30px;color:var(--ft-cyan);font-weight:600;font-size:0.95rem;background:rgba(56,207,255,0.06)}
         .jump-links{display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-top:1.5rem}.jump-links a{color:#9CA3AF;text-decoration:none;font-weight:600;padding:0.4rem 1rem;border:1px solid rgba(30,120,255,0.25);border-radius:20px;transition:all 0.3s}.jump-links a:hover{color:var(--ft-azure);border-color:var(--ft-azure)}
         .section-anchor{display:block;position:relative;top:-90px;visibility:hidden}
@@ -63,21 +62,11 @@
         .care-note{text-align:center;color:var(--ft-gray-light);opacity:0.85;font-size:0.95rem;margin-top:1.5rem}
         .bundle-note{text-align:center;max-width:760px;margin:2.5rem auto 0;padding:1.25rem 1.5rem;border:1px dashed rgba(30,120,255,0.4);border-radius:12px;color:var(--ft-gray-light);font-size:1.05rem}
         .bundle-link{color:var(--ft-azure);text-decoration:none;font-weight:600;white-space:nowrap}.bundle-link:hover{color:var(--ft-cyan)}
+        .nav-toggle{display:none;background:none;border:none;cursor:pointer;width:28px;height:20px;position:relative;flex:none;padding:0}.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{display:block;width:100%;height:1.5px;background:var(--ft-mist);position:absolute;transition:transform .3s,opacity .3s;left:0}.nav-toggle span{top:50%;transform:translateY(-50%)}.nav-toggle span::before{content:"";top:-7px;position:absolute}.nav-toggle span::after{content:"";top:7px;position:absolute}.nav-toggle.open span{background:transparent}.nav-toggle.open span::before{top:0;transform:rotate(45deg)}.nav-toggle.open span::after{top:0;transform:rotate(-45deg)}
+        .footer-inner{max-width:1200px;margin:0 auto;padding:0 20px}.footer-brand{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:1rem}.footer-brand img{height:42px;width:auto}.footer-brand .fwm{font-family:'Michroma',sans-serif;font-size:.9rem;letter-spacing:.12em;color:var(--ft-mist);white-space:nowrap}.footer-brand .fwm .wm-suffix{color:var(--ft-azure)}
         @media(max-width:1024px){.services-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.service-card h2{min-height:auto}.service-subtitle{min-height:auto}}
-        @media(max-width:768px){nav{padding:0.75rem 1rem}.nav-content{flex-direction:column;gap:0.75rem}.nav-logo{justify-content:center}.nav-logo img{height:40px}.nav-links{width:100%;justify-content:space-evenly;font-size:0.9rem;gap:1.5rem}.hero{margin-top:100px;padding:4rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.ai-section .section-title{font-size:1.75rem}.ai-section .section-intro{font-size:1rem}.services-grid{grid-template-columns:1fr;padding:2rem 0}.service-card{padding:1.5rem}.comparison-section{padding:2rem 0}.table-wrapper{margin:1rem -10px;padding:0 10px}.comparison-table{font-size:0.8rem;min-width:400px}.comparison-table th,.comparison-table td{padding:0.5rem 0.4rem}.jump-links{gap:0.5rem}.jump-links a{font-size:0.85rem;padding:0.35rem 0.75rem}}
+        @media(max-width:860px){.nav-toggle{display:block}.nav-content{flex-direction:row;gap:0}.nav-links{display:none;position:fixed;top:76px;left:0;right:0;bottom:0;background:rgba(11,17,20,.96);backdrop-filter:blur(16px);flex-direction:column;align-items:center;justify-content:center;gap:36px;z-index:49;list-style:none}.nav-links.open{display:flex}.nav-links a{font-size:18px;color:var(--ft-mist)}.nav-logo img.nav-mark{height:32px}.nav-wm{font-size:.82rem;letter-spacing:.09em}.hero{margin-top:100px;padding:4rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.ai-section .section-title{font-size:1.75rem}.ai-section .section-intro{font-size:1rem}.services-grid{grid-template-columns:1fr;padding:2rem 0}.service-card{padding:1.5rem}.comparison-section{padding:2rem 0}.table-wrapper{margin:1rem -10px;padding:0 10px}.comparison-table{font-size:0.8rem;min-width:400px}.comparison-table th,.comparison-table td{padding:0.5rem 0.4rem}.jump-links{gap:0.5rem}.jump-links a{font-size:0.85rem;padding:0.35rem 0.75rem}}
     </style>
-<style>
-/* FlowTech brand v4 refresh */
-.nav-logo{gap:.6rem}
-.nav-logo img.nav-mark{height:42px;width:auto}
-.nav-wm{font-family:'Michroma',sans-serif;font-size:1.05rem;letter-spacing:.12em;color:var(--ft-mist,#E7ECF2);white-space:nowrap;line-height:1}
-.nav-wm .wm-suffix{color:var(--ft-azure)}
-.hero-mark{width:140px;height:auto;margin-bottom:1.25rem;filter:drop-shadow(0 0 30px rgba(30,120,255,.35))}
-.hero-wm{font-family:'Michroma',sans-serif;font-size:clamp(1.5rem,4.2vw,2.4rem);letter-spacing:.14em;color:var(--ft-mist,#E7ECF2);line-height:1.15;margin-bottom:.85rem}
-.hero-wm .wm-suffix{color:var(--ft-azure)}
-.hero-tag{font-family:'Michroma',sans-serif;font-size:clamp(.68rem,1.7vw,.95rem);letter-spacing:.26em;color:var(--ft-cyan);margin-bottom:1.75rem}
-@media(max-width:768px){.nav-logo img.nav-mark{height:32px}.nav-wm{font-size:.82rem;letter-spacing:.09em}}
-</style>
 </head>
 <body>
     <nav>
@@ -88,346 +77,76 @@
           <li><a href="/about/">About</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
       </div>
     </nav>
     <section class="hero"><div class="container">
         <h1>Websites, Branding &amp; AI Content</h1>
         <p>Professional digital solutions for Australian small business.</p>
         <div class="model-banner">One-time builds &middot; optional monthly care &middot; no lock-in</div>
-        <div class="jump-links">
-            <a href="#websites">Websites</a>
-            <a href="#branding">Branding</a>
-            <a href="#care">Care Plans</a>
-            <a href="#ai">AI Influencer</a>
-        </div>
+        <div class="jump-links"><a href="#websites">Websites</a><a href="#branding">Branding</a><a href="#care">Care Plans</a><a href="#ai">AI Influencer</a></div>
     </div></section>
-
-    <!-- WEBSITES -->
-    <section class="container">
-        <span id="websites" class="section-anchor"></span>
-        <div class="section-head">
-            <h2>Websites</h2>
-            <p>Fast, professional sites built to convert. One-time build &mdash; the site is yours.</p>
-        </div>
+    <section class="container"><span id="websites" class="section-anchor"></span><div class="section-head"><h2>Websites</h2><p>Fast, professional sites built to convert. One-time build &mdash; the site is yours.</p></div>
         <div class="services-grid">
-            <div class="service-card">
-                <span class="service-badge badge-web">LAUNCH</span>
-                <h2>Launch</h2>
-                <p class="service-subtitle">Get online fast with a clean, professional presence</p>
-                <div class="pricing">
-                    <div class="price-main">$2,000</div>
-                    <div class="price-note">One-time build</div>
-                </div>
-                <ul class="features-list">
-                    <li>Up to 5 pages</li>
-                    <li>Mobile-responsive design</li>
-                    <li>Basic SEO foundation</li>
-                    <li>Contact form integration</li>
-                    <li>CloudFlare hosting &amp; SSL</li>
-                </ul>
-                <div class="card-footer">
-                    <span class="delivery-tag">Delivery: 5-7 business days</span>
-                    <a href="/intake-form/" class="cta-button">Get a Quote</a>
-                </div>
-            </div>
-            <div class="service-card most-popular">
-                <span class="popular-tag">MOST POPULAR</span>
-                <span class="service-badge badge-web">BUSINESS</span>
-                <h2>Business</h2>
-                <p class="service-subtitle">A custom-designed site for businesses ready to grow</p>
-                <div class="pricing">
-                    <div class="price-main">$4,000</div>
-                    <div class="price-note">One-time build</div>
-                </div>
-                <ul class="features-list">
-                    <li>Up to 10 pages</li>
-                    <li>Custom design</li>
-                    <li>Enhanced SEO setup</li>
-                    <li>Lead-capture forms</li>
-                    <li>Google Business Profile setup</li>
-                    <li>CloudFlare hosting &amp; SSL</li>
-                </ul>
-                <div class="card-footer">
-                    <span class="delivery-tag">Delivery: 7-10 business days</span>
-                    <a href="/intake-form/" class="cta-button">Get a Quote</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <span class="service-badge badge-web">PRO</span>
-                <h2>Pro</h2>
-                <p class="service-subtitle">Larger or eCommerce builds with advanced functionality</p>
-                <div class="pricing">
-                    <div class="price-main">$7,000</div>
-                    <div class="price-note">One-time build</div>
-                </div>
-                <ul class="features-list">
-                    <li>15+ / fully custom pages</li>
-                    <li>eCommerce ready</li>
-                    <li>Advanced SEO</li>
-                    <li>Third-party integrations</li>
-                    <li>Performance optimisation</li>
-                    <li>CloudFlare hosting &amp; SSL</li>
-                </ul>
-                <div class="card-footer">
-                    <span class="delivery-tag">Delivery: 2-3 weeks</span>
-                    <a href="/intake-form/" class="cta-button">Get a Quote</a>
-                </div>
-            </div>
+            <div class="service-card"><span class="service-badge badge-web">LAUNCH</span><h2>Launch</h2><p class="service-subtitle">Get online fast with a clean, professional presence</p><div class="pricing"><div class="price-main">$2,000</div><div class="price-note">One-time build</div></div><ul class="features-list"><li>Up to 5 pages</li><li>Mobile-responsive design</li><li>Basic SEO foundation</li><li>Contact form integration</li><li>CloudFlare hosting &amp; SSL</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 5-7 business days</span><a href="/intake-form/" class="cta-button">Get a Quote</a></div></div>
+            <div class="service-card most-popular"><span class="popular-tag">MOST POPULAR</span><span class="service-badge badge-web">BUSINESS</span><h2>Business</h2><p class="service-subtitle">A custom-designed site for businesses ready to grow</p><div class="pricing"><div class="price-main">$4,000</div><div class="price-note">One-time build</div></div><ul class="features-list"><li>Up to 10 pages</li><li>Custom design</li><li>Enhanced SEO setup</li><li>Lead-capture forms</li><li>Google Business Profile setup</li><li>CloudFlare hosting &amp; SSL</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 7-10 business days</span><a href="/intake-form/" class="cta-button">Get a Quote</a></div></div>
+            <div class="service-card"><span class="service-badge badge-web">PRO</span><h2>Pro</h2><p class="service-subtitle">Larger or eCommerce builds with advanced functionality</p><div class="pricing"><div class="price-main">$7,000</div><div class="price-note">One-time build</div></div><ul class="features-list"><li>15+ / fully custom pages</li><li>eCommerce ready</li><li>Advanced SEO</li><li>Third-party integrations</li><li>Performance optimisation</li><li>CloudFlare hosting &amp; SSL</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 2-3 weeks</span><a href="/intake-form/" class="cta-button">Get a Quote</a></div></div>
         </div>
-        <div class="comparison-section"><div class="container"><h3>Website Plans Compared</h3>
-            <div class="table-wrapper">
-            <table class="comparison-table"><thead><tr><th>Feature</th><th>Launch</th><th>Business</th><th>Pro</th></tr></thead>
-            <tbody>
-                <tr><td><strong>Price (one-time)</strong></td><td>$2,000</td><td>$4,000</td><td>$7,000</td></tr>
-                <tr><td><strong>Pages</strong></td><td>Up to 5</td><td>Up to 10</td><td>15+ / custom</td></tr>
-                <tr><td><strong>Design</strong></td><td>Template-based</td><td>Custom</td><td>Fully custom</td></tr>
-                <tr><td><strong>Mobile responsive</strong></td><td>✓</td><td>✓</td><td>✓</td></tr>
-                <tr><td><strong>SEO</strong></td><td>Basic</td><td>Enhanced</td><td>Advanced</td></tr>
-                <tr><td><strong>eCommerce</strong></td><td>-</td><td>Add-on</td><td>✓</td></tr>
-                <tr><td><strong>CloudFlare hosting &amp; SSL</strong></td><td>✓</td><td>✓</td><td>✓</td></tr>
-            </tbody></table>
-            </div>
-        </div></div>
+        <div class="comparison-section"><div class="container"><h3>Website Plans Compared</h3><div class="table-wrapper"><table class="comparison-table"><thead><tr><th>Feature</th><th>Launch</th><th>Business</th><th>Pro</th></tr></thead><tbody><tr><td><strong>Price (one-time)</strong></td><td>$2,000</td><td>$4,000</td><td>$7,000</td></tr><tr><td><strong>Pages</strong></td><td>Up to 5</td><td>Up to 10</td><td>15+ / custom</td></tr><tr><td><strong>Design</strong></td><td>Template-based</td><td>Custom</td><td>Fully custom</td></tr><tr><td><strong>Mobile responsive</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr><tr><td><strong>SEO</strong></td><td>Basic</td><td>Enhanced</td><td>Advanced</td></tr><tr><td><strong>eCommerce</strong></td><td>-</td><td>Add-on</td><td>&#10003;</td></tr><tr><td><strong>CloudFlare hosting &amp; SSL</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr></tbody></table></div></div></div>
     </section>
-
-    <!-- BRANDING -->
-    <section class="container">
-        <span id="branding" class="section-anchor"></span>
-        <div class="section-head">
-            <h2>Branding</h2>
-            <p>Logos and brand systems that make a small business look established.</p>
-        </div>
+    <section class="container"><span id="branding" class="section-anchor"></span><div class="section-head"><h2>Branding</h2><p>Logos and brand systems that make a small business look established.</p></div>
         <div class="services-grid">
-            <div class="service-card">
-                <span class="service-badge badge-brand">LOGO ESSENTIALS</span>
-                <h2>Logo Essentials</h2>
-                <p class="service-subtitle">A clean, professional logo and the basics to use it</p>
-                <div class="pricing">
-                    <div class="price-main">$990</div>
-                    <div class="price-note">One-time</div>
-                </div>
-                <ul class="features-list">
-                    <li>Primary logo + variations</li>
-                    <li>Colour palette</li>
-                    <li>Font pairing</li>
-                    <li>File pack (SVG, PNG)</li>
-                </ul>
-                <div class="card-footer">
-                    <span class="delivery-tag">Delivery: 3-5 business days</span>
-                    <a href="/intake-form/" class="cta-button">Get Started</a>
-                </div>
-            </div>
-            <div class="service-card most-popular">
-                <span class="popular-tag">MOST POPULAR</span>
-                <span class="service-badge badge-brand">BRAND IDENTITY</span>
-                <h2>Brand Identity</h2>
-                <p class="service-subtitle">A complete identity system with guidelines</p>
-                <div class="pricing">
-                    <div class="price-main">$2,750</div>
-                    <div class="price-note">One-time</div>
-                </div>
-                <ul class="features-list">
-                    <li>Everything in Logo Essentials</li>
-                    <li>Full brand guidelines</li>
-                    <li>Secondary marks &amp; icons</li>
-                    <li>Social media kit</li>
-                    <li>Stationery templates</li>
-                </ul>
-                <div class="card-footer">
-                    <span class="delivery-tag">Delivery: 1-2 weeks</span>
-                    <a href="/intake-form/" class="cta-button">Get Started</a>
-                </div>
-            </div>
-            <div class="service-card">
-                <span class="service-badge badge-brand">BRAND + LAUNCH</span>
-                <h2>Brand + Launch</h2>
-                <p class="service-subtitle">A full identity plus a website to launch it on</p>
-                <div class="pricing">
-                    <div class="price-main">$4,950</div>
-                    <div class="price-note">One-time</div>
-                </div>
-                <ul class="features-list">
-                    <li>Full Brand Identity package</li>
-                    <li>Business-tier website included</li>
-                    <li>Social profile setup</li>
-                    <li>Launch-ready asset pack</li>
-                </ul>
-                <div class="card-footer">
-                    <span class="delivery-tag">Delivery: 2-3 weeks</span>
-                    <a href="/intake-form/" class="cta-button">Get Started</a>
-                </div>
-            </div>
+            <div class="service-card"><span class="service-badge badge-brand">LOGO ESSENTIALS</span><h2>Logo Essentials</h2><p class="service-subtitle">A clean, professional logo and the basics to use it</p><div class="pricing"><div class="price-main">$990</div><div class="price-note">One-time</div></div><ul class="features-list"><li>Primary logo + variations</li><li>Colour palette</li><li>Font pairing</li><li>File pack (SVG, PNG)</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 3-5 business days</span><a href="/intake-form/" class="cta-button">Get Started</a></div></div>
+            <div class="service-card most-popular"><span class="popular-tag">MOST POPULAR</span><span class="service-badge badge-brand">BRAND IDENTITY</span><h2>Brand Identity</h2><p class="service-subtitle">A complete identity system with guidelines</p><div class="pricing"><div class="price-main">$2,750</div><div class="price-note">One-time</div></div><ul class="features-list"><li>Everything in Logo Essentials</li><li>Full brand guidelines</li><li>Secondary marks &amp; icons</li><li>Social media kit</li><li>Stationery templates</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 1-2 weeks</span><a href="/intake-form/" class="cta-button">Get Started</a></div></div>
+            <div class="service-card"><span class="service-badge badge-brand">BRAND + LAUNCH</span><h2>Brand + Launch</h2><p class="service-subtitle">A full identity plus a website to launch it on</p><div class="pricing"><div class="price-main">$4,950</div><div class="price-note">One-time</div></div><ul class="features-list"><li>Full Brand Identity package</li><li>Business-tier website included</li><li>Social profile setup</li><li>Launch-ready asset pack</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 2-3 weeks</span><a href="/intake-form/" class="cta-button">Get Started</a></div></div>
         </div>
     </section>
-
-    <!-- CARE PLANS -->
-    <section class="care-section">
-        <div class="container">
-            <span id="care" class="section-anchor"></span>
-            <div class="section-head">
-                <h2>Care Plans</h2>
-                <p>Optional ongoing support. Month-to-month, cancel anytime &mdash; no lock-in.</p>
-            </div>
+    <section class="care-section"><div class="container"><span id="care" class="section-anchor"></span><div class="section-head"><h2>Care Plans</h2><p>Optional ongoing support. Month-to-month, cancel anytime &mdash; no lock-in.</p></div>
             <div class="services-grid">
-                <div class="service-card">
-                    <span class="service-badge badge-care">CARE BASIC</span>
-                    <h2>Care Basic</h2>
-                    <p class="service-subtitle">Keep your site secure, backed up and online</p>
-                    <div class="pricing">
-                        <div class="price-main">$99<span class="per-mo">/month</span></div>
-                        <div class="price-note">Cancel anytime</div>
-                    </div>
-                    <ul class="features-list">
-                        <li>Hosting &amp; SSL monitoring</li>
-                        <li>Security updates</li>
-                        <li>Monthly backups</li>
-                        <li>1 content update / month</li>
-                        <li>Email support</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="/intake-form/" class="cta-button">Add a Care Plan</a>
-                    </div>
-                </div>
-                <div class="service-card most-popular">
-                    <span class="popular-tag">MOST POPULAR</span>
-                    <span class="service-badge badge-care">CARE STANDARD</span>
-                    <h2>Care Standard</h2>
-                    <p class="service-subtitle">Regular updates and proactive monitoring</p>
-                    <div class="pricing">
-                        <div class="price-main">$199<span class="per-mo">/month</span></div>
-                        <div class="price-note">Cancel anytime</div>
-                    </div>
-                    <ul class="features-list">
-                        <li>Everything in Care Basic</li>
-                        <li>3 content updates / month</li>
-                        <li>Uptime monitoring</li>
-                        <li>Performance checks</li>
-                        <li>Priority email support</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="/intake-form/" class="cta-button">Add a Care Plan</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <span class="service-badge badge-care">CARE PLUS</span>
-                    <h2>Care Plus</h2>
-                    <p class="service-subtitle">Hands-on partner for an evolving site</p>
-                    <div class="pricing">
-                        <div class="price-main">$399<span class="per-mo">/month</span></div>
-                        <div class="price-note">Cancel anytime</div>
-                    </div>
-                    <ul class="features-list">
-                        <li>Everything in Care Standard</li>
-                        <li>Unlimited minor updates</li>
-                        <li>Monthly analytics report</li>
-                        <li>Quarterly strategy review</li>
-                        <li>Priority support</li>
-                    </ul>
-                    <div class="card-footer">
-                        <a href="/intake-form/" class="cta-button">Add a Care Plan</a>
-                    </div>
-                </div>
+                <div class="service-card"><span class="service-badge badge-care">CARE BASIC</span><h2>Care Basic</h2><p class="service-subtitle">Keep your site secure, backed up and online</p><div class="pricing"><div class="price-main">$99<span class="per-mo">/month</span></div><div class="price-note">Cancel anytime</div></div><ul class="features-list"><li>Hosting &amp; SSL monitoring</li><li>Security updates</li><li>Monthly backups</li><li>1 content update / month</li><li>Email support</li></ul><div class="card-footer"><a href="/intake-form/" class="cta-button">Add a Care Plan</a></div></div>
+                <div class="service-card most-popular"><span class="popular-tag">MOST POPULAR</span><span class="service-badge badge-care">CARE STANDARD</span><h2>Care Standard</h2><p class="service-subtitle">Regular updates and proactive monitoring</p><div class="pricing"><div class="price-main">$199<span class="per-mo">/month</span></div><div class="price-note">Cancel anytime</div></div><ul class="features-list"><li>Everything in Care Basic</li><li>3 content updates / month</li><li>Uptime monitoring</li><li>Performance checks</li><li>Priority email support</li></ul><div class="card-footer"><a href="/intake-form/" class="cta-button">Add a Care Plan</a></div></div>
+                <div class="service-card"><span class="service-badge badge-care">CARE PLUS</span><h2>Care Plus</h2><p class="service-subtitle">Hands-on partner for an evolving site</p><div class="pricing"><div class="price-main">$399<span class="per-mo">/month</span></div><div class="price-note">Cancel anytime</div></div><ul class="features-list"><li>Everything in Care Standard</li><li>Unlimited minor updates</li><li>Monthly analytics report</li><li>Quarterly strategy review</li><li>Priority support</li></ul><div class="card-footer"><a href="/intake-form/" class="cta-button">Add a Care Plan</a></div></div>
             </div>
             <p class="care-note">Care plans are optional and never required to have us build your site. Start, pause or cancel anytime &mdash; there are no minimum terms and no cancellation fees.</p>
         </div>
     </section>
-
-    <!-- BUNDLE HOOK -->
-    <section class="container">
-        <p class="bundle-note">New to business? The <strong>New Business Launch</strong> bundle pairs Brand Identity with a Business website for roughly 10&ndash;15% less than booking them separately. <a href="#branding" class="bundle-link">See branding &rarr;</a></p>
-    </section>
-
-    <!-- AI Influencer Creation Section -->
-    <section class="ai-section">
-        <div class="container">
-            <span id="ai" class="section-anchor"></span>
-            <div class="section-header">
-                <h2 class="section-title">🤖 AI Influencer Creation</h2>
-                <p class="section-intro">Create unique, AI-powered virtual influencers for your brand. Perfect for businesses wanting consistent, cost-effective social media presence without traditional influencer challenges.</p>
-            </div>
+    <section class="container"><p class="bundle-note">New to business? The <strong>New Business Launch</strong> bundle pairs Brand Identity with a Business website for roughly 10&ndash;15% less than booking them separately. <a href="#branding" class="bundle-link">See branding &rarr;</a></p></section>
+    <section class="ai-section"><div class="container"><span id="ai" class="section-anchor"></span>
+            <div class="section-header"><h2 class="section-title">AI Influencer Creation</h2><p class="section-intro">Create unique, AI-powered virtual influencers for your brand. Perfect for businesses wanting consistent, cost-effective social media presence without traditional influencer challenges.</p></div>
             <div class="services-grid">
-                <div class="service-card">
-                    <span class="service-badge badge-ai">STARTER</span>
-                    <h2>Single AI Persona</h2>
-                    <p class="service-subtitle">Launch your first AI influencer with a consistent brand presence</p>
-                    <div class="pricing">
-                        <div class="price-main">$499</div>
-                        <div class="price-note">One-time creation fee</div>
-                    </div>
-                    <ul class="features-list">
-                        <li>1 custom AI influencer persona</li>
-                        <li>Character backstory &amp; voice guide</li>
-                        <li>10 AI-generated images</li>
-                        <li>1 talking head video</li>
-                        <li>Platform-ready assets (Instagram/Twitter)</li>
-                        <li>Basic character style guide</li>
-                        <li>Email support</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="delivery-tag">Delivery: 3-5 business days</span>
-                        <a href="https://buy.stripe.com/5kQ7sNbnK006gH59vH93y0f" class="cta-button cta-button-ai">Buy Now - $499</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <span class="service-badge badge-ai-pro">PROFESSIONAL</span>
-                    <h2>Full Persona Package</h2>
-                    <p class="service-subtitle">Complete AI influencer with expanded content library</p>
-                    <div class="pricing">
-                        <div class="price-main">$999</div>
-                        <div class="price-note">One-time creation fee</div>
-                    </div>
-                    <ul class="features-list">
-                        <li>1 custom AI influencer persona</li>
-                        <li>Complete character backstory &amp; voice</li>
-                        <li>30 AI-generated images</li>
-                        <li>5 talking head videos</li>
-                        <li>Multi-platform assets (IG, Twitter, TikTok)</li>
-                        <li>Comprehensive style guide</li>
-                        <li>Content calendar template</li>
-                        <li>Priority support (24-hour)</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="delivery-tag">Delivery: 5-7 business days</span>
-                        <a href="https://buy.stripe.com/aFa00l8by14a0I78rD93y0e" class="cta-button cta-button-ai">Buy Now - $999</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <span class="service-badge badge-ai-enterprise">ENTERPRISE</span>
-                    <h2>Multi-Persona Strategy</h2>
-                    <p class="service-subtitle">Build an AI influencer network targeting different audiences</p>
-                    <div class="pricing">
-                        <div class="price-main">$1,999</div>
-                        <div class="price-note">One-time creation fee</div>
-                    </div>
-                    <ul class="features-list">
-                        <li>Up to 3 AI influencer personas</li>
-                        <li>Unique visual style per persona</li>
-                        <li>50+ AI-generated images total</li>
-                        <li>10 talking head videos</li>
-                        <li>Cross-promotion strategy document</li>
-                        <li>All platform assets included</li>
-                        <li>Competitor analysis included</li>
-                        <li>VIP support (4-hour response)</li>
-                        <li>1 revision round included</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="delivery-tag">Delivery: 7-10 business days</span>
-                        <a href="https://buy.stripe.com/28EbJ3bnK00662r8rD93y0d" class="cta-button cta-button-ai">Buy Now - $1,999</a>
-                    </div>
-                </div>
+                <div class="service-card"><span class="service-badge badge-ai">STARTER</span><h2>Single AI Persona</h2><p class="service-subtitle">Launch your first AI influencer with a consistent brand presence</p><div class="pricing"><div class="price-main">$499</div><div class="price-note">One-time creation fee</div></div><ul class="features-list"><li>1 custom AI influencer persona</li><li>Character backstory &amp; voice guide</li><li>10 AI-generated images</li><li>1 talking head video</li><li>Platform-ready assets (Instagram/Twitter)</li><li>Basic character style guide</li><li>Email support</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 3-5 business days</span><a href="https://buy.stripe.com/5kQ7sNbnK006gH59vH93y0f" class="cta-button cta-button-ai">Buy Now - $499</a></div></div>
+                <div class="service-card"><span class="service-badge badge-ai-pro">PROFESSIONAL</span><h2>Full Persona Package</h2><p class="service-subtitle">Complete AI influencer with expanded content library</p><div class="pricing"><div class="price-main">$999</div><div class="price-note">One-time creation fee</div></div><ul class="features-list"><li>1 custom AI influencer persona</li><li>Complete character backstory &amp; voice</li><li>30 AI-generated images</li><li>5 talking head videos</li><li>Multi-platform assets (IG, Twitter, TikTok)</li><li>Comprehensive style guide</li><li>Content calendar template</li><li>Priority support (24-hour)</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 5-7 business days</span><a href="https://buy.stripe.com/aFa00l8by14a0I78rD93y0e" class="cta-button cta-button-ai">Buy Now - $999</a></div></div>
+                <div class="service-card"><span class="service-badge badge-ai-enterprise">ENTERPRISE</span><h2>Multi-Persona Strategy</h2><p class="service-subtitle">Build an AI influencer network targeting different audiences</p><div class="pricing"><div class="price-main">$1,999</div><div class="price-note">One-time creation fee</div></div><ul class="features-list"><li>Up to 3 AI influencer personas</li><li>Unique visual style per persona</li><li>50+ AI-generated images total</li><li>10 talking head videos</li><li>Cross-promotion strategy document</li><li>All platform assets included</li><li>Competitor analysis included</li><li>VIP support (4-hour response)</li><li>1 revision round included</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 7-10 business days</span><a href="https://buy.stripe.com/28EbJ3bnK00662r8rD93y0d" class="cta-button cta-button-ai">Buy Now - $1,999</a></div></div>
             </div>
-            <div class="section-link">
-                <a href="/services/ai-influencer/">Learn more about AI Influencer Creation →</a>
-            </div>
+            <div class="section-link"><a href="/services/ai-influencer/">Learn more about AI Influencer Creation &rarr;</a></div>
         </div>
     </section>
-
     <footer>
-      <div class="footer-logo">
-        <img src="/assets/ft-digital-icon.svg" alt="FlowTech Digital">
+      <div class="footer-inner">
+        <div class="footer-brand"><img src="/assets/ft-digital-icon.svg" alt=""><span class="fwm">FLOWTECH&nbsp;<span class="wm-suffix">DIGITAL</span></span></div>
+        <p>&copy; 2026 FlowTech Digital. ABN 76 689 878 420</p>
+        <p><a href="/privacy/">Privacy</a> | <a href="/terms/">Terms</a></p>
+        <p><a href="mailto:hello@flowtechdigital.com.au">hello@flowtechdigital.com.au</a> &middot; <a href="tel:+61477482827">0477 482 827</a></p>
       </div>
-      <p>&copy; 2025 FlowTech Digital. ABN 76 689 878 420</p>
-      <p><a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a> | <a href="mailto:hello@flowtechdigital.com.au">hello@flowtechdigital.com.au</a></p>
     </footer>
+<script>
+const toggle=document.querySelector('.nav-toggle');
+const mlinks=document.querySelector('.nav-links');
+if(toggle){
+  toggle.addEventListener('click',()=>{
+    const open=toggle.classList.toggle('open');
+    mlinks.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open);
+    document.body.style.overflow=open?'hidden':'';
+  });
+  mlinks.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',()=>{
+      toggle.classList.remove('open');mlinks.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+}
+</script>
 </body>
 </html>
