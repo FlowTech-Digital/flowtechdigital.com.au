@@ -25,7 +25,7 @@
         :root{--ft-azure:#1E78FF;--ft-cyan:#38CFFF;--ft-obsidian:#0B1114;--ft-ink:#1A2230;--ft-slate:#5B6675;--ft-mist:#E7ECF2;--ft-indigo:#0A3D91;--ft-white:#FFFFFF;--ft-gray-light:#F5F5F5;--ft-font-primary:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--ft-font-heading:'IBM Plex Sans',var(--ft-font-primary)}
         *{margin:0;padding:0;box-sizing:border-box}html,body{overflow-x:hidden;width:100%}body{font-family:var(--ft-font-primary);line-height:1.6;color:var(--ft-white);background:var(--ft-obsidian)}.container{max-width:1200px;margin:0 auto;padding:0 20px}
         nav{position:fixed;top:0;left:0;right:0;width:100%;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none;gap:.6rem}.nav-logo img.nav-mark{height:42px;width:auto}.nav-wm{font-family:'Michroma',sans-serif;font-size:1.05rem;letter-spacing:.12em;color:var(--ft-mist);white-space:nowrap;line-height:1}.nav-wm .wm-suffix{color:var(--ft-azure)}.nav-links{display:flex;gap:3rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
-        .hero{background:linear-gradient(135deg,var(--ft-obsidian) 0%,var(--ft-indigo) 100%);color:white;padding:6rem 0 4rem;text-align:center;margin-top:73px}.hero h1{font-family:var(--ft-font-heading);font-size:2.5rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-azure) 0%,var(--ft-cyan) 50%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero p{font-size:1.2rem;margin-bottom:1rem;opacity:0.9;color:var(--ft-gray-light)}
+        .hero{background:linear-gradient(135deg,var(--ft-obsidian) 0%,var(--ft-indigo) 100%);color:white;padding:6rem 0 4rem;text-align:center;margin-top:73px}.hero h1{font-family:var(--ft-font-heading);font-size:clamp(2.2rem,5vw,3.2rem);margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-azure) 0%,var(--ft-cyan) 50%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero p{font-size:1.2rem;margin-bottom:1rem;opacity:0.9;color:var(--ft-gray-light)}
         .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding:2rem 0 3rem}
         .service-card{background:rgba(30,120,255,0.08);border-radius:12px;padding:2rem;border:1px solid rgba(30,120,255,0.2);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(30,120,255,0.2);border-color:rgba(30,120,255,0.4)}
         .service-badge{display:inline-block;padding:0.5rem 1rem;border-radius:20px;font-size:0.875rem;font-weight:bold;margin-bottom:1rem;align-self:flex-start}.badge-starter{background:#fbbf24;color:#78350f}.badge-growth{background:#34d399;color:#065f46}.badge-premium{background:#a78bfa;color:#4c1d95}.badge-ai{background:linear-gradient(135deg,#38CFFF 0%,#1E78FF 100%);color:#FFFFFF}.badge-ai-pro{background:linear-gradient(135deg,#1E78FF 0%,#a78bfa 100%);color:#FFFFFF}.badge-ai-enterprise{background:linear-gradient(135deg,#a78bfa 0%,#ec4899 100%);color:#FFFFFF}
@@ -66,7 +66,13 @@
         .footer-inner{max-width:1200px;margin:0 auto;padding:0 20px}.footer-brand{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:1rem}.footer-brand img{height:42px;width:auto}.footer-brand .fwm{font-family:'Michroma',sans-serif;font-size:.9rem;letter-spacing:.12em;color:var(--ft-mist);white-space:nowrap}.footer-brand .fwm .wm-suffix{color:var(--ft-azure)}
         @media(max-width:1024px){.services-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.service-card h2{min-height:auto}.service-subtitle{min-height:auto}}
         @media(max-width:860px){.nav-toggle{display:block}.nav-content{flex-direction:row;gap:0}.nav-links{display:none;position:fixed;top:76px;left:0;right:0;bottom:0;background:rgba(11,17,20,.96);backdrop-filter:blur(16px);flex-direction:column;align-items:center;justify-content:center;gap:36px;z-index:49;list-style:none}.nav-links.open{display:flex}.nav-links a{font-size:18px;color:var(--ft-mist)}.nav-logo img.nav-mark{height:32px}.nav-wm{font-size:.82rem;letter-spacing:.09em}.hero{margin-top:100px;padding:4rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.ai-section .section-title{font-size:1.75rem}.ai-section .section-intro{font-size:1rem}.services-grid{grid-template-columns:1fr;padding:2rem 0}.service-card{padding:1.5rem}.comparison-section{padding:2rem 0}.table-wrapper{margin:1rem -10px;padding:0 10px}.comparison-table{font-size:0.8rem;min-width:400px}.comparison-table th,.comparison-table td{padding:0.5rem 0.4rem}.jump-links{gap:0.5rem}.jump-links a{font-size:0.85rem;padding:0.35rem 0.75rem}}
-    </style>
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+::selection{background:rgba(30,120,255,0.3);color:#fff}::-moz-selection{background:rgba(30,120,255,0.3);color:#fff}
+body{animation:pageIn .5s ease}@keyframes pageIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.08s}.reveal-d2{transition-delay:.16s}.reveal-d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}body{animation:none}}
+</style>
 </head>
 <body>
     <nav>
@@ -81,12 +87,12 @@
       </div>
     </nav>
     <section class="hero"><div class="container">
-        <h1>Websites, Branding &amp; AI Content</h1>
-        <p>Professional digital solutions for Australian small business.</p>
-        <div class="model-banner">One-time builds &middot; optional monthly care &middot; no lock-in</div>
-        <div class="jump-links"><a href="#websites">Websites</a><a href="#branding">Branding</a><a href="#care">Care Plans</a><a href="#ai">AI Influencer</a></div>
+        <h1 class="reveal">Websites, Branding &amp; AI Content</h1>
+        <p class="reveal reveal-d1">Professional digital solutions for Australian small business.</p>
+        <div class="model-banner reveal reveal-d2">One-time builds &middot; optional monthly care &middot; no lock-in</div>
+        <div class="jump-links reveal"><a href="#websites">Websites</a><a href="#branding">Branding</a><a href="#care">Care Plans</a><a href="#ai">AI Influencer</a></div>
     </div></section>
-    <section class="container"><span id="websites" class="section-anchor"></span><div class="section-head"><h2>Websites</h2><p>Fast, professional sites built to convert. One-time build &mdash; the site is yours.</p></div>
+    <section class="container"><span id="websites" class="section-anchor"></span><div class="section-head reveal"><h2>Websites</h2><p>Fast, professional sites built to convert. One-time build &mdash; the site is yours.</p></div>
         <div class="services-grid">
             <div class="service-card"><span class="service-badge badge-web">LAUNCH</span><h2>Launch</h2><p class="service-subtitle">Get online fast with a clean, professional presence</p><div class="pricing"><div class="price-main">$2,000</div><div class="price-note">One-time build</div></div><ul class="features-list"><li>Up to 5 pages</li><li>Mobile-responsive design</li><li>Basic SEO foundation</li><li>Contact form integration</li><li>CloudFlare hosting &amp; SSL</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 5-7 business days</span><a href="/intake-form/" class="cta-button">Get a Quote</a></div></div>
             <div class="service-card most-popular"><span class="popular-tag">MOST POPULAR</span><span class="service-badge badge-web">BUSINESS</span><h2>Business</h2><p class="service-subtitle">A custom-designed site for businesses ready to grow</p><div class="pricing"><div class="price-main">$4,000</div><div class="price-note">One-time build</div></div><ul class="features-list"><li>Up to 10 pages</li><li>Custom design</li><li>Enhanced SEO setup</li><li>Lead-capture forms</li><li>Google Business Profile setup</li><li>CloudFlare hosting &amp; SSL</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 7-10 business days</span><a href="/intake-form/" class="cta-button">Get a Quote</a></div></div>
@@ -94,14 +100,14 @@
         </div>
         <div class="comparison-section"><div class="container"><h3>Website Plans Compared</h3><div class="table-wrapper"><table class="comparison-table"><thead><tr><th>Feature</th><th>Launch</th><th>Business</th><th>Pro</th></tr></thead><tbody><tr><td><strong>Price (one-time)</strong></td><td>$2,000</td><td>$4,000</td><td>$7,000</td></tr><tr><td><strong>Pages</strong></td><td>Up to 5</td><td>Up to 10</td><td>15+ / custom</td></tr><tr><td><strong>Design</strong></td><td>Template-based</td><td>Custom</td><td>Fully custom</td></tr><tr><td><strong>Mobile responsive</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr><tr><td><strong>SEO</strong></td><td>Basic</td><td>Enhanced</td><td>Advanced</td></tr><tr><td><strong>eCommerce</strong></td><td>-</td><td>Add-on</td><td>&#10003;</td></tr><tr><td><strong>CloudFlare hosting &amp; SSL</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr></tbody></table></div></div></div>
     </section>
-    <section class="container"><span id="branding" class="section-anchor"></span><div class="section-head"><h2>Branding</h2><p>Logos and brand systems that make a small business look established.</p></div>
+    <section class="container"><span id="branding" class="section-anchor"></span><div class="section-head reveal"><h2>Branding</h2><p>Logos and brand systems that make a small business look established.</p></div>
         <div class="services-grid">
             <div class="service-card"><span class="service-badge badge-brand">LOGO ESSENTIALS</span><h2>Logo Essentials</h2><p class="service-subtitle">A clean, professional logo and the basics to use it</p><div class="pricing"><div class="price-main">$990</div><div class="price-note">One-time</div></div><ul class="features-list"><li>Primary logo + variations</li><li>Colour palette</li><li>Font pairing</li><li>File pack (SVG, PNG)</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 3-5 business days</span><a href="/intake-form/" class="cta-button">Get Started</a></div></div>
             <div class="service-card most-popular"><span class="popular-tag">MOST POPULAR</span><span class="service-badge badge-brand">BRAND IDENTITY</span><h2>Brand Identity</h2><p class="service-subtitle">A complete identity system with guidelines</p><div class="pricing"><div class="price-main">$2,750</div><div class="price-note">One-time</div></div><ul class="features-list"><li>Everything in Logo Essentials</li><li>Full brand guidelines</li><li>Secondary marks &amp; icons</li><li>Social media kit</li><li>Stationery templates</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 1-2 weeks</span><a href="/intake-form/" class="cta-button">Get Started</a></div></div>
             <div class="service-card"><span class="service-badge badge-brand">BRAND + LAUNCH</span><h2>Brand + Launch</h2><p class="service-subtitle">A full identity plus a website to launch it on</p><div class="pricing"><div class="price-main">$4,950</div><div class="price-note">One-time</div></div><ul class="features-list"><li>Full Brand Identity package</li><li>Business-tier website included</li><li>Social profile setup</li><li>Launch-ready asset pack</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 2-3 weeks</span><a href="/intake-form/" class="cta-button">Get Started</a></div></div>
         </div>
     </section>
-    <section class="care-section"><div class="container"><span id="care" class="section-anchor"></span><div class="section-head"><h2>Care Plans</h2><p>Optional ongoing support. Month-to-month, cancel anytime &mdash; no lock-in.</p></div>
+    <section class="care-section"><div class="container"><span id="care" class="section-anchor"></span><div class="section-head reveal"><h2>Care Plans</h2><p>Optional ongoing support. Month-to-month, cancel anytime &mdash; no lock-in.</p></div>
             <div class="services-grid">
                 <div class="service-card"><span class="service-badge badge-care">CARE BASIC</span><h2>Care Basic</h2><p class="service-subtitle">Keep your site secure, backed up and online</p><div class="pricing"><div class="price-main">$99<span class="per-mo">/month</span></div><div class="price-note">Cancel anytime</div></div><ul class="features-list"><li>Hosting &amp; SSL monitoring</li><li>Security updates</li><li>Monthly backups</li><li>1 content update / month</li><li>Email support</li></ul><div class="card-footer"><a href="/intake-form/" class="cta-button">Add a Care Plan</a></div></div>
                 <div class="service-card most-popular"><span class="popular-tag">MOST POPULAR</span><span class="service-badge badge-care">CARE STANDARD</span><h2>Care Standard</h2><p class="service-subtitle">Regular updates and proactive monitoring</p><div class="pricing"><div class="price-main">$199<span class="per-mo">/month</span></div><div class="price-note">Cancel anytime</div></div><ul class="features-list"><li>Everything in Care Basic</li><li>3 content updates / month</li><li>Uptime monitoring</li><li>Performance checks</li><li>Priority email support</li></ul><div class="card-footer"><a href="/intake-form/" class="cta-button">Add a Care Plan</a></div></div>
@@ -129,6 +135,21 @@
         <p><a href="mailto:hello@flowtechdigital.com.au">hello@flowtechdigital.com.au</a> &middot; <a href="tel:+61477482827">0477 482 827</a></p>
       </div>
     </footer>
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+  window.addEventListener('load',function(){
+    document.querySelectorAll('.hero .reveal, .hero-content .reveal, .form-container .reveal, .content .reveal, .contact-hero .reveal, .contact-wrap .reveal').forEach(function(el,i){
+      el.style.transitionDelay=(i*0.07)+'s';el.classList.add('in');
+    });
+  });
+})();
+</script>
 <script>
 const toggle=document.querySelector('.nav-toggle');
 const mlinks=document.querySelector('.nav-links');
