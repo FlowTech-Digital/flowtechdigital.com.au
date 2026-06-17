@@ -44,7 +44,13 @@
         .footer-inner{max-width:1200px;margin:0 auto;padding:0 20px}.footer-brand{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:1rem}.footer-brand img{height:42px;width:auto}.footer-brand .fwm{font-family:'Michroma',sans-serif;font-size:.9rem;letter-spacing:.12em;color:var(--ft-mist);white-space:nowrap}.footer-brand .fwm .wm-suffix{color:var(--ft-azure)}
         @media(max-width:1024px){.packages-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.package-card h3{min-height:auto}.package-subtitle{min-height:auto}}
         @media(max-width:860px){.nav-toggle{display:block}.nav-content{flex-direction:row;gap:0}.nav-links{display:none;position:fixed;top:76px;left:0;right:0;bottom:0;background:rgba(11,17,20,.96);backdrop-filter:blur(16px);flex-direction:column;align-items:center;justify-content:center;gap:36px;z-index:49;list-style:none}.nav-links.open{display:flex}.nav-links a{font-size:18px;color:var(--ft-mist)}.nav-logo img.nav-mark{height:32px}.nav-wm{font-size:.82rem;letter-spacing:.09em}.hero{margin-top:100px;padding:5rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.packages-grid{grid-template-columns:1fr}.package-card{padding:1.5rem}.benefits-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}}
-    </style>
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+::selection{background:rgba(30,120,255,0.3);color:#fff}::-moz-selection{background:rgba(30,120,255,0.3);color:#fff}
+body{animation:pageIn .5s ease}@keyframes pageIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.08s}.reveal-d2{transition-delay:.16s}.reveal-d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}body{animation:none}}
+</style>
 </head>
 <body>
     <nav>
@@ -61,27 +67,27 @@
     <section class="hero">
         <div class="container">
             <span class="hero-badge">AI-Powered Content</span>
-            <h1>AI Influencer Creation</h1>
+            <h1 class="reveal">AI Influencer Creation</h1>
             <p>Create unique, AI-powered virtual influencers for your brand. Consistent, cost-effective social media presence without traditional influencer challenges.</p>
-            <p style="font-size:1rem;opacity:0.8;">Available 24/7 \u2022 No scheduling conflicts \u2022 Complete brand control \u2022 Scalable content</p>
+            <p style="font-size:1rem;opacity:0.8;">Available 24/7 &#8226; No scheduling conflicts &#8226; Complete brand control &#8226; Scalable content</p>
         </div>
     </section>
     <section class="benefits-section">
         <div class="container">
-            <h2>Why Choose AI Influencers?</h2>
+            <h2 class="reveal">Why Choose AI Influencers?</h2>
             <div class="benefits-grid">
-                <div class="benefit-card"><div class="benefit-icon">\ud83d\udcb0</div><h3>Cost-Effective</h3><p>No ongoing talent fees, travel costs, or unpredictable pricing. One-time creation with unlimited content potential.</p></div>
-                <div class="benefit-card"><div class="benefit-icon">\ud83c\udfaf</div><h3>Brand Consistent</h3><p>Your AI influencer always stays on-brand, on-message, and aligned with your values. No surprises or controversies.</p></div>
-                <div class="benefit-card"><div class="benefit-icon">\u26a1</div><h3>Always Available</h3><p>Content on demand, any time. No scheduling conflicts, timezone issues, or availability problems.</p></div>
-                <div class="benefit-card"><div class="benefit-icon">\ud83d\udcc8</div><h3>Scalable</h3><p>Create multiple personas targeting different audience segments. Scale your social presence without scaling costs linearly.</p></div>
-                <div class="benefit-card"><div class="benefit-icon">\ud83d\udd12</div><h3>Full Ownership</h3><p>You own your AI influencer entirely. No contract negotiations, exclusivity clauses, or talent departures.</p></div>
-                <div class="benefit-card"><div class="benefit-icon">\ud83c\udfac</div><h3>Video &amp; Image</h3><p>High-quality AI-generated video content and static images. Talking-head videos, product showcases, and more.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">&#128176;</div><h3>Cost-Effective</h3><p>No ongoing talent fees, travel costs, or unpredictable pricing. One-time creation with unlimited content potential.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">&#127919;</div><h3>Brand Consistent</h3><p>Your AI influencer always stays on-brand, on-message, and aligned with your values. No surprises or controversies.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">&#9889;</div><h3>Always Available</h3><p>Content on demand, any time. No scheduling conflicts, timezone issues, or availability problems.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">&#128200;</div><h3>Scalable</h3><p>Create multiple personas targeting different audience segments. Scale your social presence without scaling costs linearly.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">&#128274;</div><h3>Full Ownership</h3><p>You own your AI influencer entirely. No contract negotiations, exclusivity clauses, or talent departures.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">&#127916;</div><h3>Video &amp; Image</h3><p>High-quality AI-generated video content and static images. Talking-head videos, product showcases, and more.</p></div>
             </div>
         </div>
     </section>
     <section class="packages-section">
         <div class="container">
-            <h2>Choose Your Package</h2>
+            <h2 class="reveal">Choose Your Package</h2>
             <p class="section-intro">One-time creation packages to launch your AI influencer. All packages include complete persona creation and ready-to-use content assets.</p>
             <div class="packages-grid">
                 <div class="package-card">
@@ -113,7 +119,7 @@
     </section>
     <section class="process-section">
         <div class="container">
-            <h2>How It Works</h2>
+            <h2 class="reveal">How It Works</h2>
             <div class="process-grid">
                 <div class="process-step"><div class="step-number">1</div><h3>Discovery</h3><p>Share your brand, audience, and vision for your AI influencer.</p></div>
                 <div class="process-step"><div class="step-number">2</div><h3>Persona Design</h3><p>We create your unique persona with visual style, voice, and personality.</p></div>
@@ -126,7 +132,7 @@
     </section>
     <section class="faq-section">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <h2 class="reveal">Frequently Asked Questions</h2>
             <div class="faq-grid">
                 <div class="faq-item"><h3>What platforms can I use my AI influencer on?</h3><p>All major platforms including Instagram, TikTok, YouTube, LinkedIn, Facebook, and X (Twitter). Your assets are optimized for your chosen platforms.</p></div>
                 <div class="faq-item"><h3>How realistic are the AI-generated videos?</h3><p>We use cutting-edge AI video generation technology. Videos feature natural lip-sync, expressions, and gestures that are indistinguishable from human presenters to most viewers.</p></div>
@@ -139,7 +145,7 @@
     </section>
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Launch Your AI Influencer?</h2>
+            <h2 class="reveal">Ready to Launch Your AI Influencer?</h2>
             <p>Get in touch to discuss your brand's needs and see if AI influencer marketing is right for you.</p>
             <a href="/contact/" class="cta-button cta-button-primary">Contact Us</a>
         </div>
@@ -152,6 +158,21 @@
         <p><a href="mailto:hello@flowtechdigital.com.au">hello@flowtechdigital.com.au</a> &middot; <a href="tel:+61477482827">0477 482 827</a></p>
       </div>
     </footer>
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!els.length)return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+  window.addEventListener('load',function(){
+    document.querySelectorAll('.hero .reveal, .hero-content .reveal, .form-container .reveal, .content .reveal, .contact-hero .reveal, .contact-wrap .reveal').forEach(function(el,i){
+      el.style.transitionDelay=(i*0.07)+'s';el.classList.add('in');
+    });
+  });
+})();
+</script>
 <script>
 const toggle=document.querySelector('.nav-toggle');
 const mlinks=document.querySelector('.nav-links');
