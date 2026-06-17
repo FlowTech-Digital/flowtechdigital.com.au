@@ -38,9 +38,16 @@ body{animation:pageIn .5s ease}@keyframes pageIn{from{opacity:0}to{opacity:1}}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.in{opacity:1;transform:none}
 .reveal-d1{transition-delay:.08s}.reveal-d2{transition-delay:.16s}.reveal-d3{transition-delay:.24s}
 @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}body{animation:none}}
-  </style>
+.preloader{position:fixed;inset:0;background:#0B1114;z-index:9999;display:flex;align-items:center;justify-content:center}
+.preloader.out{animation:preloaderOut .45s ease forwards}
+.preloader.out .preloader-logo{animation:logoGrow .4s ease forwards}
+@keyframes preloaderOut{to{opacity:0;visibility:hidden;pointer-events:none}}
+@keyframes logoGrow{to{transform:scale(1.4);opacity:0}}
+@media(prefers-reduced-motion:reduce){.preloader.out,.preloader.out .preloader-logo{animation-duration:0s}}
+</style>
 </head>
 <body>
+<div class="preloader"><img src="/assets/ft-digital-icon.svg" alt="" class="preloader-logo" style="height:80px;width:80px"></div>
   <nav>
     <div class="nav-content">
       <a href="/" class="nav-logo"><img src="/assets/ft-digital-icon.svg" alt="FlowTech Digital" class="nav-mark"><span class="nav-wm">FLOWTECH&nbsp;<span class="wm-suffix">DIGITAL</span></span></a>
@@ -86,10 +93,10 @@ body{animation:pageIn .5s ease}@keyframes pageIn{from{opacity:0}to{opacity:1}}
         <p>Brand identity and website build for exterior cleaning and chimney specialists. Currently in production &mdash; launching soon.</p>
         <span class="port-link">Coming soon</span>
       </a>
-      <a class="portfolio-card reveal reveal-d3" href="https://durocrete.com.au/" target="_blank" rel="noopener">
-        <div class="port-head"><h3>DuroCrete</h3><span class="port-badge in-prod">In Production</span></div>
+      <a class="portfolio-card reveal reveal-d3" href="https://durocrete-com-au.pages.dev/" target="_blank" rel="noopener">
+        <div class="port-head"><h3>DuroCrete</h3><span class="port-badge in-prod">Dev</span></div>
         <p>Premium website for a Sydney concrete contractor. Full single-page build with service pages, quote forms and animations.</p>
-        <span class="port-link">Coming soon</span>
+        <span class="port-link">View dev build &rarr;</span>
       </a>
     </div>
   </section>
@@ -135,5 +142,6 @@ if(toggle){
   });
 }
 </script>
+<script>window.addEventListener("load",function(){setTimeout(function(){var p=document.querySelector(".preloader");if(p){p.classList.add("out");p.addEventListener("animationend",function(){p.remove();})}},250);});</script>
 </body>
 </html>
