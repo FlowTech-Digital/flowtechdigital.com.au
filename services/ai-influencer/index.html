@@ -24,7 +24,7 @@
     <style>
         :root{--ft-azure:#1E78FF;--ft-cyan:#38CFFF;--ft-obsidian:#0B1114;--ft-ink:#1A2230;--ft-slate:#5B6675;--ft-mist:#E7ECF2;--ft-indigo:#0A3D91;--ft-white:#FFFFFF;--ft-gray-light:#F5F5F5;--ft-font-primary:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--ft-font-heading:'IBM Plex Sans',var(--ft-font-primary)}
         *{margin:0;padding:0;box-sizing:border-box}html,body{overflow-x:hidden;width:100%}body{font-family:var(--ft-font-primary);line-height:1.6;color:var(--ft-white);background:var(--ft-obsidian)}.container{max-width:1200px;margin:0 auto;padding:0 20px}
-        nav{position:fixed;top:0;left:0;right:0;width:100%;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none}.nav-logo img{height:55px;width:auto}.nav-links{display:flex;gap:3rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
+        nav{position:fixed;top:0;left:0;right:0;width:100%;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none;gap:.6rem}.nav-logo img.nav-mark{height:42px;width:auto}.nav-wm{font-family:'Michroma',sans-serif;font-size:1.05rem;letter-spacing:.12em;color:var(--ft-mist);white-space:nowrap;line-height:1}.nav-wm .wm-suffix{color:var(--ft-azure)}.nav-links{display:flex;gap:3rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
         .hero{background:linear-gradient(135deg,rgba(56,207,255,0.15) 0%,rgba(30,120,255,0.15) 50%,var(--ft-indigo) 100%);color:white;padding:8rem 0 5rem;text-align:center;margin-top:73px}.hero h1{font-family:var(--ft-font-heading);font-size:clamp(2rem,5vw,3.5rem);margin-bottom:1.5rem;background:linear-gradient(135deg,var(--ft-cyan) 0%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero p{font-size:1.25rem;margin-bottom:1rem;color:var(--ft-gray-light);max-width:800px;margin-left:auto;margin-right:auto}.hero-badge{display:inline-block;padding:0.5rem 1.5rem;border-radius:50px;font-size:0.875rem;font-weight:bold;background:linear-gradient(135deg,#38CFFF 0%,#1E78FF 100%);color:#FFFFFF;margin-bottom:2rem}
         .benefits-section{padding:5rem 0;background:rgba(0,0,0,0.3)}.benefits-section h2{font-family:var(--ft-font-heading);text-align:center;font-size:2rem;margin-bottom:3rem;color:var(--ft-azure)}.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}.benefit-card{background:rgba(30,120,255,0.08);border-radius:12px;padding:2rem;border:1px solid rgba(30,120,255,0.2);text-align:center}.benefit-icon{font-size:3rem;margin-bottom:1rem}.benefit-card h3{font-family:var(--ft-font-heading);font-size:1.25rem;margin-bottom:0.75rem;color:var(--ft-cyan)}.benefit-card p{color:var(--ft-gray-light);font-size:0.95rem}
         .packages-section{padding:5rem 0}.packages-section>h2{font-family:var(--ft-font-heading);text-align:center;font-size:2rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-cyan) 0%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.packages-section .section-intro{text-align:center;color:var(--ft-gray-light);margin-bottom:3rem;max-width:700px;margin-left:auto;margin-right:auto}
@@ -33,28 +33,18 @@
         .package-badge{display:inline-block;padding:0.5rem 1rem;border-radius:20px;font-size:0.875rem;font-weight:bold;margin-bottom:1rem;align-self:flex-start}.badge-starter{background:linear-gradient(135deg,#38CFFF 0%,#1E78FF 100%);color:#FFFFFF}.badge-professional{background:linear-gradient(135deg,#1E78FF 0%,#a78bfa 100%);color:#FFFFFF}.badge-enterprise{background:linear-gradient(135deg,#a78bfa 0%,#ec4899 100%);color:#FFFFFF}
         .package-card h3{font-family:var(--ft-font-heading);font-size:1.75rem;margin-bottom:0.5rem;color:var(--ft-cyan);min-height:84px;display:flex;align-items:flex-start}.package-subtitle{color:var(--ft-gray-light);font-size:1rem;margin-bottom:0;min-height:52px}
         .pricing{padding:1.5rem;background:rgba(56,207,255,0.1);border-radius:8px;border-left:4px solid var(--ft-cyan)}.price-main{font-size:2.25rem;font-weight:bold;color:var(--ft-cyan);margin-bottom:0.25rem}.price-note{font-size:0.9rem;color:var(--ft-gray-light)}
-        .features-list{list-style:none;margin:1.5rem 0;color:var(--ft-gray-light);flex-grow:1}.features-list li{padding:0.6rem 0;padding-left:1.75rem;position:relative;font-size:0.95rem}.features-list li:before{content:"✓";position:absolute;left:0;color:var(--ft-cyan);font-weight:bold}
+        .features-list{list-style:none;margin:1.5rem 0;color:var(--ft-gray-light);flex-grow:1}.features-list li{padding:0.6rem 0;padding-left:1.75rem;position:relative;font-size:0.95rem}.features-list li:before{content:"\2713";position:absolute;left:0;color:var(--ft-cyan);font-weight:bold}
         .card-footer{margin-top:auto;padding-top:1.5rem}.delivery-tag{display:block;margin-bottom:1rem;color:var(--ft-cyan);font-weight:600;font-size:0.95rem}
         .cta-button{display:inline-block;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:all 0.3s;text-align:center;width:100%}.cta-button-primary{background:linear-gradient(135deg,#38CFFF 0%,#1E78FF 100%);color:white}.cta-button-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(56,207,255,0.4)}
         .process-section{padding:5rem 0;background:rgba(56,207,255,0.05)}.process-section h2{font-family:var(--ft-font-heading);text-align:center;font-size:2rem;margin-bottom:3rem;color:var(--ft-azure)}.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;max-width:1000px;margin:0 auto}.process-step{text-align:center;padding:1.5rem}.step-number{display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--ft-cyan) 0%,var(--ft-azure) 100%);color:white;font-family:var(--ft-font-heading);font-size:1.5rem;font-weight:bold;margin-bottom:1rem}.process-step h3{font-family:var(--ft-font-heading);font-size:1.1rem;margin-bottom:0.5rem;color:var(--ft-white)}.process-step p{color:var(--ft-gray-light);font-size:0.9rem}
         .faq-section{padding:5rem 0}.faq-section h2{font-family:var(--ft-font-heading);text-align:center;font-size:2rem;margin-bottom:3rem;color:var(--ft-azure)}.faq-grid{max-width:800px;margin:0 auto}.faq-item{background:rgba(30,120,255,0.08);border-radius:8px;padding:1.5rem;margin-bottom:1rem;border:1px solid rgba(30,120,255,0.2)}.faq-item h3{font-family:var(--ft-font-heading);font-size:1.1rem;margin-bottom:0.75rem;color:var(--ft-cyan)}.faq-item p{color:var(--ft-gray-light);font-size:0.95rem}
         .cta-section{padding:5rem 0;text-align:center;background:linear-gradient(135deg,rgba(56,207,255,0.1) 0%,rgba(30,120,255,0.1) 100%)}.cta-section h2{font-family:var(--ft-font-heading);font-size:2rem;margin-bottom:1rem;color:var(--ft-white)}.cta-section p{color:var(--ft-gray-light);margin-bottom:2rem;font-size:1.1rem}.cta-section .cta-button{display:inline-block;width:auto;padding:1rem 3rem}
-        footer{background:rgba(11,17,20,0.95);color:white;padding:2rem;text-align:center;border-top:1px solid rgba(30,120,255,0.1)}.footer-logo{margin-bottom:1rem}.footer-logo img{height:64px;width:auto}footer p{font-size:0.9rem;color:#6b7280;margin-bottom:0.5rem}footer a{color:var(--ft-azure);text-decoration:none}
+        footer{background:rgba(11,17,20,0.95);color:white;padding:2rem;text-align:center;border-top:1px solid rgba(30,120,255,0.1)}footer p{font-size:0.9rem;color:#6b7280;margin-bottom:0.5rem}footer a{color:var(--ft-azure);text-decoration:none}
+        .nav-toggle{display:none;background:none;border:none;cursor:pointer;width:28px;height:20px;position:relative;flex:none;padding:0}.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{display:block;width:100%;height:1.5px;background:var(--ft-mist);position:absolute;transition:transform .3s,opacity .3s;left:0}.nav-toggle span{top:50%;transform:translateY(-50%)}.nav-toggle span::before{content:"";top:-7px;position:absolute}.nav-toggle span::after{content:"";top:7px;position:absolute}.nav-toggle.open span{background:transparent}.nav-toggle.open span::before{top:0;transform:rotate(45deg)}.nav-toggle.open span::after{top:0;transform:rotate(-45deg)}
+        .footer-inner{max-width:1200px;margin:0 auto;padding:0 20px}.footer-brand{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:1rem}.footer-brand img{height:42px;width:auto}.footer-brand .fwm{font-family:'Michroma',sans-serif;font-size:.9rem;letter-spacing:.12em;color:var(--ft-mist);white-space:nowrap}.footer-brand .fwm .wm-suffix{color:var(--ft-azure)}
         @media(max-width:1024px){.packages-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.package-card h3{min-height:auto}.package-subtitle{min-height:auto}}
-        @media(max-width:768px){nav{padding:0.75rem 1rem}.nav-content{flex-direction:column;gap:0.75rem}.nav-logo{justify-content:center}.nav-logo img{height:40px}.nav-links{width:100%;justify-content:space-evenly;font-size:0.9rem;gap:1.5rem}.hero{margin-top:100px;padding:5rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.packages-grid{grid-template-columns:1fr}.package-card{padding:1.5rem}.benefits-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}}
+        @media(max-width:860px){.nav-toggle{display:block}.nav-content{flex-direction:row;gap:0}.nav-links{display:none;position:fixed;top:76px;left:0;right:0;bottom:0;background:rgba(11,17,20,.96);backdrop-filter:blur(16px);flex-direction:column;align-items:center;justify-content:center;gap:36px;z-index:49;list-style:none}.nav-links.open{display:flex}.nav-links a{font-size:18px;color:var(--ft-mist)}.nav-logo img.nav-mark{height:32px}.nav-wm{font-size:.82rem;letter-spacing:.09em}.hero{margin-top:100px;padding:5rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.packages-grid{grid-template-columns:1fr}.package-card{padding:1.5rem}.benefits-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}}
     </style>
-<style>
-/* FlowTech brand v4 refresh */
-.nav-logo{gap:.6rem}
-.nav-logo img.nav-mark{height:42px;width:auto}
-.nav-wm{font-family:'Michroma',sans-serif;font-size:1.05rem;letter-spacing:.12em;color:var(--ft-mist,#E7ECF2);white-space:nowrap;line-height:1}
-.nav-wm .wm-suffix{color:var(--ft-azure)}
-.hero-mark{width:140px;height:auto;margin-bottom:1.25rem;filter:drop-shadow(0 0 30px rgba(30,120,255,.35))}
-.hero-wm{font-family:'Michroma',sans-serif;font-size:clamp(1.5rem,4.2vw,2.4rem);letter-spacing:.14em;color:var(--ft-mist,#E7ECF2);line-height:1.15;margin-bottom:.85rem}
-.hero-wm .wm-suffix{color:var(--ft-azure)}
-.hero-tag{font-family:'Michroma',sans-serif;font-size:clamp(.68rem,1.7vw,.95rem);letter-spacing:.26em;color:var(--ft-cyan);margin-bottom:1.75rem}
-@media(max-width:768px){.nav-logo img.nav-mark{height:32px}.nav-wm{font-size:.82rem;letter-spacing:.09em}}
-</style>
 </head>
 <body>
     <nav>
@@ -65,56 +55,30 @@
           <li><a href="/about/">About</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
       </div>
     </nav>
-
     <section class="hero">
         <div class="container">
-            <span class="hero-badge">🤖 AI-Powered Content</span>
+            <span class="hero-badge">AI-Powered Content</span>
             <h1>AI Influencer Creation</h1>
             <p>Create unique, AI-powered virtual influencers for your brand. Consistent, cost-effective social media presence without traditional influencer challenges.</p>
-            <p style="font-size:1rem;opacity:0.8;">Available 24/7 • No scheduling conflicts • Complete brand control • Scalable content</p>
+            <p style="font-size:1rem;opacity:0.8;">Available 24/7 \u2022 No scheduling conflicts \u2022 Complete brand control \u2022 Scalable content</p>
         </div>
     </section>
-
     <section class="benefits-section">
         <div class="container">
             <h2>Why Choose AI Influencers?</h2>
             <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
-                    <h3>Cost-Effective</h3>
-                    <p>No ongoing talent fees, travel costs, or unpredictable pricing. One-time creation with unlimited content potential.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Brand Consistent</h3>
-                    <p>Your AI influencer always stays on-brand, on-message, and aligned with your values. No surprises or controversies.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⚡</div>
-                    <h3>Always Available</h3>
-                    <p>Content on demand, any time. No scheduling conflicts, timezone issues, or availability problems.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📈</div>
-                    <h3>Scalable</h3>
-                    <p>Create multiple personas targeting different audience segments. Scale your social presence without scaling costs linearly.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔒</div>
-                    <h3>Full Ownership</h3>
-                    <p>You own your AI influencer entirely. No contract negotiations, exclusivity clauses, or talent departures.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎬</div>
-                    <h3>Video & Image</h3>
-                    <p>High-quality AI-generated video content and static images. Talking-head videos, product showcases, and more.</p>
-                </div>
+                <div class="benefit-card"><div class="benefit-icon">\ud83d\udcb0</div><h3>Cost-Effective</h3><p>No ongoing talent fees, travel costs, or unpredictable pricing. One-time creation with unlimited content potential.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">\ud83c\udfaf</div><h3>Brand Consistent</h3><p>Your AI influencer always stays on-brand, on-message, and aligned with your values. No surprises or controversies.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">\u26a1</div><h3>Always Available</h3><p>Content on demand, any time. No scheduling conflicts, timezone issues, or availability problems.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">\ud83d\udcc8</div><h3>Scalable</h3><p>Create multiple personas targeting different audience segments. Scale your social presence without scaling costs linearly.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">\ud83d\udd12</div><h3>Full Ownership</h3><p>You own your AI influencer entirely. No contract negotiations, exclusivity clauses, or talent departures.</p></div>
+                <div class="benefit-card"><div class="benefit-icon">\ud83c\udfac</div><h3>Video &amp; Image</h3><p>High-quality AI-generated video content and static images. Talking-head videos, product showcases, and more.</p></div>
             </div>
         </div>
     </section>
-
     <section class="packages-section">
         <div class="container">
             <h2>Choose Your Package</h2>
@@ -124,145 +88,55 @@
                     <span class="package-badge badge-starter">STARTER</span>
                     <h3>Single AI Persona</h3>
                     <p class="package-subtitle">Launch your first AI influencer with a consistent brand presence</p>
-                    <div class="pricing">
-                        <div class="price-main">$499</div>
-                        <div class="price-note">One-time creation fee</div>
-                    </div>
-                    <ul class="features-list">
-                        <li>1 custom AI influencer persona</li>
-                        <li>Character backstory & voice guide</li>
-                        <li>10 AI-generated images</li>
-                        <li>1 talking head video</li>
-                        <li>Platform-ready assets (Instagram/Twitter)</li>
-                        <li>Basic character style guide</li>
-                        <li>Email support</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="delivery-tag">📅 Delivery: 3-5 business days</span>
-                        <a href="https://buy.stripe.com/5kQ7sNbnK006gH59vH93y0f" class="cta-button cta-button-primary">Buy Now - $499</a>
-                    </div>
+                    <div class="pricing"><div class="price-main">$499</div><div class="price-note">One-time creation fee</div></div>
+                    <ul class="features-list"><li>1 custom AI influencer persona</li><li>Character backstory &amp; voice guide</li><li>10 AI-generated images</li><li>1 talking head video</li><li>Platform-ready assets (Instagram/Twitter)</li><li>Basic character style guide</li><li>Email support</li></ul>
+                    <div class="card-footer"><span class="delivery-tag">Delivery: 3-5 business days</span><a href="https://buy.stripe.com/5kQ7sNbnK006gH59vH93y0f" class="cta-button cta-button-primary">Buy Now - $499</a></div>
                 </div>
                 <div class="package-card">
                     <span class="package-badge badge-professional">PROFESSIONAL</span>
                     <h3>Full Persona Package</h3>
                     <p class="package-subtitle">Complete AI influencer with expanded content library</p>
-                    <div class="pricing">
-                        <div class="price-main">$999</div>
-                        <div class="price-note">One-time creation fee</div>
-                    </div>
-                    <ul class="features-list">
-                        <li>1 custom AI influencer persona</li>
-                        <li>Complete character backstory & voice</li>
-                        <li>30 AI-generated images</li>
-                        <li>5 talking head videos</li>
-                        <li>Multi-platform assets (IG, Twitter, TikTok)</li>
-                        <li>Comprehensive style guide</li>
-                        <li>Content calendar template</li>
-                        <li>Priority support (24-hour)</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="delivery-tag">📅 Delivery: 5-7 business days</span>
-                        <a href="https://buy.stripe.com/aFa00l8by14a0I78rD93y0e" class="cta-button cta-button-primary">Buy Now - $999</a>
-                    </div>
+                    <div class="pricing"><div class="price-main">$999</div><div class="price-note">One-time creation fee</div></div>
+                    <ul class="features-list"><li>1 custom AI influencer persona</li><li>Complete character backstory &amp; voice</li><li>30 AI-generated images</li><li>5 talking head videos</li><li>Multi-platform assets (IG, Twitter, TikTok)</li><li>Comprehensive style guide</li><li>Content calendar template</li><li>Priority support (24-hour)</li></ul>
+                    <div class="card-footer"><span class="delivery-tag">Delivery: 5-7 business days</span><a href="https://buy.stripe.com/aFa00l8by14a0I78rD93y0e" class="cta-button cta-button-primary">Buy Now - $999</a></div>
                 </div>
                 <div class="package-card">
                     <span class="package-badge badge-enterprise">ENTERPRISE</span>
                     <h3>Multi-Persona Strategy</h3>
                     <p class="package-subtitle">Build an AI influencer network targeting different audiences</p>
-                    <div class="pricing">
-                        <div class="price-main">$1,999</div>
-                        <div class="price-note">One-time creation fee</div>
-                    </div>
-                    <ul class="features-list">
-                        <li>Up to 3 AI influencer personas</li>
-                        <li>Unique visual style per persona</li>
-                        <li>50+ AI-generated images total</li>
-                        <li>10 talking head videos</li>
-                        <li>Cross-promotion strategy document</li>
-                        <li>All platform assets included</li>
-                        <li>Competitor analysis included</li>
-                        <li>VIP support (4-hour response)</li>
-                        <li>1 revision round included</li>
-                    </ul>
-                    <div class="card-footer">
-                        <span class="delivery-tag">📅 Delivery: 7-10 business days</span>
-                        <a href="https://buy.stripe.com/28EbJ3bnK00662r8rD93y0d" class="cta-button cta-button-primary">Buy Now - $1,999</a>
-                    </div>
+                    <div class="pricing"><div class="price-main">$1,999</div><div class="price-note">One-time creation fee</div></div>
+                    <ul class="features-list"><li>Up to 3 AI influencer personas</li><li>Unique visual style per persona</li><li>50+ AI-generated images total</li><li>10 talking head videos</li><li>Cross-promotion strategy document</li><li>All platform assets included</li><li>Competitor analysis included</li><li>VIP support (4-hour response)</li><li>1 revision round included</li></ul>
+                    <div class="card-footer"><span class="delivery-tag">Delivery: 7-10 business days</span><a href="https://buy.stripe.com/28EbJ3bnK00662r8rD93y0d" class="cta-button cta-button-primary">Buy Now - $1,999</a></div>
                 </div>
             </div>
         </div>
     </section>
-
     <section class="process-section">
         <div class="container">
             <h2>How It Works</h2>
             <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Discovery</h3>
-                    <p>Share your brand, audience, and vision for your AI influencer.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Persona Design</h3>
-                    <p>We create your unique persona with visual style, voice, and personality.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Content Creation</h3>
-                    <p>We generate your AI images and videos to your specifications.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Review</h3>
-                    <p>You review and request any refinements to perfect your persona.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3>Delivery</h3>
-                    <p>Receive your complete asset package, ready for your platforms.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">6</div>
-                    <h3>Launch</h3>
-                    <p>Start posting and growing your AI influencer's presence.</p>
-                </div>
+                <div class="process-step"><div class="step-number">1</div><h3>Discovery</h3><p>Share your brand, audience, and vision for your AI influencer.</p></div>
+                <div class="process-step"><div class="step-number">2</div><h3>Persona Design</h3><p>We create your unique persona with visual style, voice, and personality.</p></div>
+                <div class="process-step"><div class="step-number">3</div><h3>Content Creation</h3><p>We generate your AI images and videos to your specifications.</p></div>
+                <div class="process-step"><div class="step-number">4</div><h3>Review</h3><p>You review and request any refinements to perfect your persona.</p></div>
+                <div class="process-step"><div class="step-number">5</div><h3>Delivery</h3><p>Receive your complete asset package, ready for your platforms.</p></div>
+                <div class="process-step"><div class="step-number">6</div><h3>Launch</h3><p>Start posting and growing your AI influencer's presence.</p></div>
             </div>
         </div>
     </section>
-
     <section class="faq-section">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>What platforms can I use my AI influencer on?</h3>
-                    <p>All major platforms including Instagram, TikTok, YouTube, LinkedIn, Facebook, and X (Twitter). Your assets are optimized for your chosen platforms.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How realistic are the AI-generated videos?</h3>
-                    <p>We use cutting-edge AI video generation technology. Videos feature natural lip-sync, expressions, and gestures that are indistinguishable from human presenters to most viewers.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can I request more content after delivery?</h3>
-                    <p>Absolutely. We offer content expansion packages for existing personas. Once your character is created, additional content is faster and more affordable.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What if I want to change my AI influencer's look?</h3>
-                    <p>Minor refinements are included in your package. Major persona changes (new look, voice, or personality) are available as add-on services.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do I own the AI influencer?</h3>
-                    <p>Yes. You own full rights to your AI persona and all generated content. Use it however you wish across any platform.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What's the turnaround time?</h3>
-                    <p>Starter: 3-5 business days. Professional: 5-7 business days. Enterprise: 7-10 business days. Rush delivery available for urgent projects.</p>
-                </div>
+                <div class="faq-item"><h3>What platforms can I use my AI influencer on?</h3><p>All major platforms including Instagram, TikTok, YouTube, LinkedIn, Facebook, and X (Twitter). Your assets are optimized for your chosen platforms.</p></div>
+                <div class="faq-item"><h3>How realistic are the AI-generated videos?</h3><p>We use cutting-edge AI video generation technology. Videos feature natural lip-sync, expressions, and gestures that are indistinguishable from human presenters to most viewers.</p></div>
+                <div class="faq-item"><h3>Can I request more content after delivery?</h3><p>Absolutely. We offer content expansion packages for existing personas. Once your character is created, additional content is faster and more affordable.</p></div>
+                <div class="faq-item"><h3>What if I want to change my AI influencer's look?</h3><p>Minor refinements are included in your package. Major persona changes (new look, voice, or personality) are available as add-on services.</p></div>
+                <div class="faq-item"><h3>Do I own the AI influencer?</h3><p>Yes. You own full rights to your AI persona and all generated content. Use it however you wish across any platform.</p></div>
+                <div class="faq-item"><h3>What's the turnaround time?</h3><p>Starter: 3-5 business days. Professional: 5-7 business days. Enterprise: 7-10 business days. Rush delivery available for urgent projects.</p></div>
             </div>
         </div>
     </section>
-
     <section class="cta-section">
         <div class="container">
             <h2>Ready to Launch Your AI Influencer?</h2>
@@ -270,13 +144,32 @@
             <a href="/contact/" class="cta-button cta-button-primary">Contact Us</a>
         </div>
     </section>
-
     <footer>
-      <div class="footer-logo">
-        <img src="/assets/ft-digital-icon.svg" alt="FlowTech Digital">
+      <div class="footer-inner">
+        <div class="footer-brand"><img src="/assets/ft-digital-icon.svg" alt=""><span class="fwm">FLOWTECH&nbsp;<span class="wm-suffix">DIGITAL</span></span></div>
+        <p>&copy; 2026 FlowTech Digital. ABN 76 689 878 420</p>
+        <p><a href="/privacy/">Privacy</a> | <a href="/terms/">Terms</a></p>
+        <p><a href="mailto:hello@flowtechdigital.com.au">hello@flowtechdigital.com.au</a> &middot; <a href="tel:+61477482827">0477 482 827</a></p>
       </div>
-      <p>&copy; 2025 FlowTech Digital. ABN 76 689 878 420</p>
-      <p><a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a> | <a href="mailto:hello@flowtechdigital.com.au">hello@flowtechdigital.com.au</a></p>
     </footer>
+<script>
+const toggle=document.querySelector('.nav-toggle');
+const mlinks=document.querySelector('.nav-links');
+if(toggle){
+  toggle.addEventListener('click',()=>{
+    const open=toggle.classList.toggle('open');
+    mlinks.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open);
+    document.body.style.overflow=open?'hidden':'';
+  });
+  mlinks.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',()=>{
+      toggle.classList.remove('open');mlinks.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+}
+</script>
 </body>
 </html>
