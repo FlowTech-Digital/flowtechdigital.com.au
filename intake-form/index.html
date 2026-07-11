@@ -77,6 +77,11 @@ body{animation:pageIn .5s ease}@keyframes pageIn{from{opacity:0}to{opacity:1}}
             <button type="submit" class="submit-btn">Submit Project Inquiry</button>
             <p class="privacy-note">By submitting this form, you agree to our <a href="/privacy/">Privacy Policy</a>.</p>
         </form>
+        <div id="form-success" hidden style="text-align:center;padding:56px 24px;border:1px solid rgba(56,207,255,.25);border-radius:14px;background:rgba(30,120,255,.06);margin-top:8px;">
+            <h2 style="margin:0 0 12px;">Inquiry received ✓</h2>
+            <p style="margin:0 0 6px;">Thanks — we've got your details.</p>
+            <p style="margin:0;">We'll review your submission and reply within <strong>24&ndash;48 hours</strong> with a custom quote at <span id="success-email"></span>.</p>
+        </div>
     </main>
     <footer>
       <div class="footer-inner">
@@ -104,12 +109,29 @@ body{animation:pageIn .5s ease}@keyframes pageIn{from{opacity:0}to{opacity:1}}
         });
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            gtag('event', 'close_convert_lead', {
-                'event_category': 'lead',
-                'event_label': 'intake_form_submission',
-                'event_callback': function() { form.submit(); }
-            });
-            setTimeout(function() { form.submit(); }, 1000);
+            var btn = form.querySelector('.submit-btn');
+            btn.disabled = true; btn.textContent = 'Sending…';
+            var data = new FormData(form);
+            fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+                .then(function(res) {
+                    if (!res.ok) throw new Error('formspree ' + res.status);
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'lead',
+                        'event_label': 'intake_form_submission',
+                        'service': data.get('service') || '',
+                        'industry': data.get('industry') || '',
+                        'timeline': data.get('timeline') || ''
+                    });
+                    document.getElementById('success-email').textContent = data.get('email') || 'your email';
+                    form.hidden = true;
+                    var ok = document.getElementById('form-success');
+                    ok.hidden = false;
+                    ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                })
+                .catch(function() {
+                    // fallback: normal POST to Formspree (their hosted thank-you page)
+                    form.submit();
+                });
         });
     })();
     </script>
