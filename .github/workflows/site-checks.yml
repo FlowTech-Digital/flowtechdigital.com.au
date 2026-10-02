@@ -1,0 +1,53 @@
+name: Website checks
+
+on:
+  pull_request:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Build and browser checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Build public website
+        run: npm run build
+
+      - name: Check website
+        run: npm test
+        env:
+          SITE_ROOT: site-dist
+          QA_OUTPUT: qa-results
+
+      - name: Save check report and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-checks-${{ github.run_id }}-${{ github.run_attempt }}
+          path: qa-results/
+          if-no-files-found: ignore
+          retention-days: 14
