@@ -1,299 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-AU">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services &amp; Pricing - FlowTech Digital</title>
-    <meta name="description" content="Websites, branding and AI content for Australian small business. One-time builds, optional monthly care plans, no lock-in. Launch from $2,000, branding from $990.">
-    <link rel="canonical" href="https://flowtechdigital.com.au/services/">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKCSTGFCJH"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YKCSTGFCJH',{'send_page_view':true});</script>
-    <link rel="icon" type="image/svg+xml" href="/favicons/ft-icon.svg">
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicons/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://flowtechdigital.com.au/services/">
-    <meta property="og:title" content="Services &amp; Pricing - FlowTech Digital">
-    <meta property="og:description" content="Websites, branding and AI content for Australian small business. One-time builds, optional monthly care plans, no lock-in.">
-    <meta property="og:image" content="https://flowtechdigital.com.au/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://flowtechdigital.com.au/og-image.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
-    <style>
-        :root{--ft-azure:#1E78FF;--ft-cyan:#38CFFF;--ft-obsidian:#0B1114;--ft-ink:#1A2230;--ft-slate:#5B6675;--ft-mist:#E7ECF2;--ft-indigo:#0A3D91;--ft-white:#FFFFFF;--ft-gray-light:#F5F5F5;--ft-font-primary:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--ft-font-heading:'IBM Plex Sans',var(--ft-font-primary)}
-        *{margin:0;padding:0;box-sizing:border-box}html,body{overflow-x:hidden;width:100%}body{font-family:var(--ft-font-primary);line-height:1.6;color:var(--ft-white);background:var(--ft-obsidian)}.container{max-width:1200px;margin:0 auto;padding:0 20px}
-        nav{position:fixed;top:0;left:0;right:0;width:100%;background:transparent;padding:1rem 2rem;z-index:1000;border-bottom:1px solid rgba(30,120,255,0.1)}nav::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:rgba(11,17,20,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.nav-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;text-decoration:none;gap:.6rem}.nav-logo img.nav-mark{height:42px;width:auto}.nav-wm{font-family:'Michroma',sans-serif;font-size:1.05rem;letter-spacing:.12em;color:var(--ft-mist);white-space:nowrap;line-height:1}.nav-wm .wm-suffix{color:var(--ft-azure)}.nav-links{display:flex;gap:3rem;list-style:none}.nav-links a{color:#9CA3AF;text-decoration:none;font-weight:500;transition:color 0.3s}.nav-links a:hover{color:var(--ft-azure)}
-        .hero{background:linear-gradient(135deg,var(--ft-obsidian) 0%,var(--ft-indigo) 100%);color:white;padding:6rem 0 4rem;text-align:center;margin-top:73px}.hero h1{font-family:var(--ft-font-heading);font-size:clamp(2.2rem,5vw,3.2rem);margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-azure) 0%,var(--ft-cyan) 50%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero p{font-size:1.2rem;margin-bottom:1rem;opacity:0.9;color:var(--ft-gray-light)}
-        .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding:2rem 0 3rem}
-        .service-card{background:rgba(30,120,255,0.08);border-radius:12px;padding:2rem;border:1px solid rgba(30,120,255,0.2);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column}.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(30,120,255,0.2);border-color:rgba(30,120,255,0.4)}
-        .service-badge{display:inline-block;padding:0.5rem 1rem;border-radius:20px;font-size:0.875rem;font-weight:bold;margin-bottom:1rem;align-self:flex-start}.badge-starter{background:#fbbf24;color:#78350f}.badge-growth{background:#34d399;color:#065f46}.badge-premium{background:#a78bfa;color:#4c1d95}.badge-ai{background:linear-gradient(135deg,#38CFFF 0%,#1E78FF 100%);color:#FFFFFF}.badge-ai-pro{background:linear-gradient(135deg,#1E78FF 0%,#a78bfa 100%);color:#FFFFFF}.badge-ai-enterprise{background:linear-gradient(135deg,#a78bfa 0%,#ec4899 100%);color:#FFFFFF}
-        .service-card h2{font-family:var(--ft-font-heading);font-size:1.75rem;margin-bottom:0.5rem;color:var(--ft-azure);min-height:84px;display:flex;align-items:flex-start}
-        .service-subtitle{color:var(--ft-gray-light);font-size:1rem;margin-bottom:0;min-height:52px}
-        .pricing{padding:1.5rem;background:rgba(30,120,255,0.1);border-radius:8px;border-left:4px solid var(--ft-azure)}.price-main{font-size:2rem;font-weight:bold;color:var(--ft-azure);margin-bottom:0.25rem}.price-note{font-size:0.9rem;color:var(--ft-gray-light)}
-        .ai-section .pricing{background:rgba(56,207,255,0.1);border-left:4px solid var(--ft-cyan)}.ai-section .price-main{color:var(--ft-cyan)}
-        .features-list{list-style:none;margin:1.5rem 0;color:var(--ft-gray-light);flex-grow:1}.features-list li{padding:0.5rem 0;padding-left:1.5rem;position:relative}.features-list li:before{content:"\2713";position:absolute;left:0;color:var(--ft-cyan);font-weight:bold}
-        .card-footer{margin-top:auto}.delivery-tag{display:block;margin:1rem 0;color:var(--ft-cyan);font-weight:600}.cta-button{display:inline-block;background:var(--ft-azure);color:white;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:bold;transition:all 0.3s;text-align:center;width:100%}.cta-button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,120,255,0.3)}.cta-button-ai{background:linear-gradient(135deg,#38CFFF 0%,#1E78FF 100%)}.cta-button-ai:hover{box-shadow:0 8px 20px rgba(56,207,255,0.4)}
-        .comparison-section{background:rgba(30,120,255,0.05);padding:3rem 0;margin:1rem 0 0}.comparison-section h3{font-family:var(--ft-font-heading);text-align:center;font-size:1.5rem;margin-bottom:2rem;color:var(--ft-azure)}
-        .table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2rem 0}
-        .comparison-table{width:100%;border-collapse:collapse;background:rgba(11,17,20,0.8);box-shadow:0 4px 6px rgba(0,0,0,0.3);border-radius:12px;overflow:hidden;min-width:480px}.comparison-table th,.comparison-table td{padding:1rem;text-align:left;border-bottom:1px solid rgba(30,120,255,0.2)}.comparison-table th{background:var(--ft-indigo);color:white;font-weight:bold}.comparison-table td{color:var(--ft-gray-light)}.comparison-table tr:last-child td{border-bottom:none}.comparison-table tr:hover td{background:rgba(30,120,255,0.05)}
-        .ai-section{background:linear-gradient(135deg,rgba(56,207,255,0.1) 0%,rgba(30,120,255,0.1) 100%);padding:4rem 0;margin:2rem 0;border-top:1px solid rgba(56,207,255,0.3);border-bottom:1px solid rgba(56,207,255,0.3)}.ai-section .section-header{text-align:center;margin-bottom:3rem}.ai-section .section-title{font-family:var(--ft-font-heading);font-size:2.5rem;margin-bottom:1rem;background:linear-gradient(135deg,var(--ft-cyan) 0%,var(--ft-azure) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;min-height:auto;display:block}.ai-section .section-intro{font-size:1.2rem;color:var(--ft-gray-light);max-width:800px;margin-left:auto;margin-right:auto;opacity:0.9}
-        .ai-section .service-card h2{color:var(--ft-cyan)}
-        .section-link{text-align:center;margin-top:2rem}.section-link a{color:var(--ft-cyan);text-decoration:none;font-weight:600;font-size:1.1rem;transition:color 0.3s}.section-link a:hover{color:var(--ft-azure)}
-        footer{background:rgba(11,17,20,0.95);color:white;padding:2rem;text-align:center;margin-top:4rem;border-top:1px solid rgba(30,120,255,0.1)}footer p{font-size:0.9rem;color:#6b7280;margin-bottom:0.5rem}footer a{color:var(--ft-azure);text-decoration:none}
-        .model-banner{display:inline-block;margin:0.5rem auto 0;padding:0.5rem 1.25rem;border:1px solid rgba(56,207,255,0.4);border-radius:30px;color:var(--ft-cyan);font-weight:600;font-size:0.95rem;background:rgba(56,207,255,0.06)}
-        .jump-links{display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-top:1.5rem}.jump-links a{color:#9CA3AF;text-decoration:none;font-weight:600;padding:0.4rem 1rem;border:1px solid rgba(30,120,255,0.25);border-radius:20px;transition:all 0.3s}.jump-links a:hover{color:var(--ft-azure);border-color:var(--ft-azure)}
-        .section-anchor{display:block;position:relative;top:-90px;visibility:hidden}
-        .section-head{text-align:center;max-width:760px;margin:3rem auto 0}.section-head h2{font-family:var(--ft-font-heading);font-size:2rem;color:var(--ft-azure);margin-bottom:0.5rem}.section-head p{font-size:1.1rem;color:var(--ft-gray-light);opacity:0.9}
-        .badge-web{background:rgba(30,120,255,0.2);color:var(--ft-cyan);border:1px solid rgba(30,120,255,0.4)}
-        .badge-brand{background:linear-gradient(135deg,#a78bfa 0%,#ec4899 100%);color:#FFFFFF}
-        .badge-care{background:linear-gradient(135deg,#34d399 0%,#10b981 100%);color:#064e3b}
-        .most-popular{border-color:var(--ft-azure);box-shadow:0 0 0 1px var(--ft-azure),0 8px 30px rgba(30,120,255,0.25);position:relative}
-        .popular-tag{position:absolute;top:-12px;right:1.5rem;background:var(--ft-azure);color:#fff;font-size:0.75rem;font-weight:700;padding:0.25rem 0.75rem;border-radius:12px;letter-spacing:0.03em}
-        .care-section{background:rgba(16,185,129,0.06);border-top:1px solid rgba(16,185,129,0.25);border-bottom:1px solid rgba(16,185,129,0.25);padding:1rem 0 3rem;margin:3rem 0 0}
-        .care-section .section-head h2{color:#34d399}
-        .care-section .pricing{background:rgba(16,185,129,0.1);border-left:4px solid #10b981}
-        .care-section .price-main{color:#34d399}
-        .care-section .service-card h2{color:#34d399}
-        .care-section .features-list li:before{color:#34d399}
-        .care-section .cta-button{background:#10b981}.care-section .cta-button:hover{box-shadow:0 8px 20px rgba(16,185,129,0.35)}
-        .per-mo{font-size:1rem;font-weight:500;color:var(--ft-gray-light)}
-        .care-note{text-align:center;color:var(--ft-gray-light);opacity:0.85;font-size:0.95rem;margin-top:1.5rem}
-        .bundle-note{text-align:center;max-width:760px;margin:2.5rem auto 0;padding:1.25rem 1.5rem;border:1px dashed rgba(30,120,255,0.4);border-radius:12px;color:var(--ft-gray-light);font-size:1.05rem}
-        .bundle-link{color:var(--ft-azure);text-decoration:none;font-weight:600;white-space:nowrap}.bundle-link:hover{color:var(--ft-cyan)}
-        .nav-toggle{display:none;background:none;border:none;cursor:pointer;width:28px;height:20px;position:relative;flex:none;padding:0}.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{display:block;width:100%;height:1.5px;background:var(--ft-mist);position:absolute;transition:transform .3s,opacity .3s;left:0}.nav-toggle span{top:50%;transform:translateY(-50%)}.nav-toggle span::before{content:"";top:-7px;position:absolute}.nav-toggle span::after{content:"";top:7px;position:absolute}.nav-toggle.open span{background:transparent}.nav-toggle.open span::before{top:0;transform:rotate(45deg)}.nav-toggle.open span::after{top:0;transform:rotate(-45deg)}
-        .footer-inner{max-width:1200px;margin:0 auto;padding:0 20px}.footer-brand{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:1rem}.footer-brand img{height:42px;width:auto}.footer-brand .fwm{font-family:'Michroma',sans-serif;font-size:.9rem;letter-spacing:.12em;color:var(--ft-mist);white-space:nowrap}.footer-brand .fwm .wm-suffix{color:var(--ft-azure)}
-        @media(max-width:1024px){.services-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.service-card h2{min-height:auto}.service-subtitle{min-height:auto}}
-        @media(max-width:860px){.nav-toggle{display:block}.nav-content{flex-direction:row;gap:0}.nav-links{display:none;position:fixed;top:var(--nav-h,65px);left:0;right:0;bottom:0;background:rgba(11,17,20,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);flex-direction:column;align-items:center;justify-content:center;gap:36px;z-index:49;list-style:none}.nav-links.open{display:flex}.nav-links a{font-size:18px;color:var(--ft-mist)}.nav-logo img.nav-mark{height:32px}.nav-wm{font-size:.82rem;letter-spacing:.09em}.hero{margin-top:100px;padding:4rem 1rem 3rem}.hero h1{font-size:1.75rem}.hero p{font-size:1rem}.ai-section .section-title{font-size:1.75rem}.ai-section .section-intro{font-size:1rem}.services-grid{grid-template-columns:1fr;padding:2rem 0}.service-card{padding:1.5rem}.comparison-section{padding:2rem 0}.table-wrapper{margin:1rem -10px;padding:0 10px}.comparison-table{font-size:0.8rem;min-width:400px}.comparison-table th,.comparison-table td{padding:0.5rem 0.4rem}.jump-links{gap:0.5rem}.jump-links a{font-size:0.85rem;padding:0.35rem 0.75rem}}
-    html{scroll-behavior:smooth;scroll-padding-top:90px}
-::selection{background:rgba(30,120,255,0.3);color:#fff}::-moz-selection{background:rgba(30,120,255,0.3);color:#fff}
-body{animation:pageIn .5s ease}@keyframes pageIn{from{opacity:0}to{opacity:1}}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.in{opacity:1;transform:none}
-.reveal-d1{transition-delay:.08s}.reveal-d2{transition-delay:.16s}.reveal-d3{transition-delay:.24s}
-@media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}body{animation:none}}
-</style>
-<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "name": "Website Design & Build",
-      "description": "Done-for-you small-business websites — designed, built and launched. One-time build, you own everything, no lock-in.",
-      "provider": {
-        "@type": "LocalBusiness",
-        "@id": "https://flowtechdigital.com.au/#business",
-        "name": "FlowTech Digital",
-        "url": "https://flowtechdigital.com.au"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Australia"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "AUD",
-        "lowPrice": "2000",
-        "highPrice": "7000",
-        "offerCount": "3",
-        "url": "https://flowtechdigital.com.au/intake-form/",
-        "description": "Quote-led — from $2,000 (GST inclusive)"
-      }
-    },
-    {
-      "@type": "Service",
-      "name": "Branding & Identity",
-      "description": "Logo, brand identity and visual system for Australian small business.",
-      "provider": {
-        "@type": "LocalBusiness",
-        "@id": "https://flowtechdigital.com.au/#business",
-        "name": "FlowTech Digital",
-        "url": "https://flowtechdigital.com.au"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Australia"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "AUD",
-        "lowPrice": "990",
-        "highPrice": "4950",
-        "offerCount": "3",
-        "url": "https://flowtechdigital.com.au/intake-form/",
-        "description": "Quote-led — from $990 (GST inclusive)"
-      }
-    },
-    {
-      "@type": "Service",
-      "name": "Website Care Plans",
-      "description": "Monthly website care — hosting management, updates, backups, security and support. No lock-in.",
-      "provider": {
-        "@type": "LocalBusiness",
-        "@id": "https://flowtechdigital.com.au/#business",
-        "name": "FlowTech Digital",
-        "url": "https://flowtechdigital.com.au"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Australia"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Care Plans",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "name": "Care Basic",
-            "price": "99.00",
-            "priceCurrency": "AUD",
-            "description": "$99 per month (GST inclusive)"
-          },
-          {
-            "@type": "Offer",
-            "name": "Care Standard",
-            "price": "199.00",
-            "priceCurrency": "AUD",
-            "description": "$199 per month (GST inclusive)"
-          },
-          {
-            "@type": "Offer",
-            "name": "Care Plus",
-            "price": "399.00",
-            "priceCurrency": "AUD",
-            "description": "$399 per month (GST inclusive)"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "Service",
-      "name": "AI Influencer Creation",
-      "description": "AI-powered virtual influencer creation for brand social presence — persona design, content system and handover.",
-      "provider": {
-        "@type": "LocalBusiness",
-        "@id": "https://flowtechdigital.com.au/#business",
-        "name": "FlowTech Digital",
-        "url": "https://flowtechdigital.com.au"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Australia"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "AUD",
-        "lowPrice": "499",
-        "highPrice": "1999",
-        "offerCount": "3",
-        "url": "https://flowtechdigital.com.au/services/ai-influencer/",
-        "description": "Starter $499 · Professional $999 · Enterprise $1,999 (GST inclusive)"
-      }
-    }
-  ]
-}
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services &amp; Pricing | FlowTech Digital</title>
+  <meta name="description" content="Website fixes from $295, brand polish from $495, websites from $2,000 and new logos from $990. Compare scopes, packages and optional care.">
+  <link rel="canonical" href="https://flowtechdigital.com.au/services/">
+  <link rel="icon" type="image/svg+xml" href="/favicons/ft-icon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicons/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0B1114">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flowtechdigital.com.au/services/">
+  <meta property="og:title" content="Services &amp; Pricing | FlowTech Digital">
+  <meta property="og:description" content="Website fixes from $295, brand polish from $495, websites from $2,000 and new logos from $990. Compare scopes, packages and optional care.">
+  <meta property="og:image" content="https://flowtechdigital.com.au/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://flowtechdigital.com.au/og-image.png">
+  <link rel="stylesheet" href="/assets/sales-pages.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script defer src="/assets/site.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKCSTGFCJH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YKCSTGFCJH',{'send_page_view':true,'page_location':window.location.origin+window.location.pathname});</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"OfferCatalog","name":"FlowTech Digital services","url":"https://flowtechdigital.com.au/services/","itemListElement":[{"@type":"Offer","name":"Website Fix Sprint","price":"295.00","priceCurrency":"AUD","url":"https://flowtechdigital.com.au/intake-form/?offer=website-fix-sprint","description":"One eligible small issue on one supported website, capped at two delivery hours. Scope, access and feasibility confirmed before payment."},{"@type":"Offer","name":"Brand Polish Pack","price":"495.00","priceCurrency":"AUD","url":"https://flowtechdigital.com.au/intake-form/?offer=brand-polish","description":"Existing usable identity: one avatar, two covers and a styling sheet, with organised files and one consolidated revision, capped at four delivery hours."}]}</script>
 </head>
 <body>
-    <nav>
-      <div class="nav-content">
-        <a href="/" class="nav-logo"><img src="/assets/ft-digital-icon.svg" alt="FlowTech Digital" class="nav-mark"><span class="nav-wm">FLOWTECH&nbsp;<span class="wm-suffix">DIGITAL</span></span></a>
-        <ul class="nav-links">
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/contact/">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav aria-label="Main navigation">
+    <div class="nav-content">
+      <a class="nav-logo" href="/" aria-label="FlowTech Digital home"><img class="nav-mark" src="/assets/ft-digital-icon.svg" alt="" width="43" height="43"><span class="nav-wm">FLOWTECH <span class="wm-suffix">DIGITAL</span></span></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span></button>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="/services/" aria-current="page">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a class="nav-contact" href="/contact/">Let’s talk</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main id="main">
+    <section class="services-hero"><div class="container"><span class="eyebrow">Services &amp; pricing</span><h1>A small fix. A sharper brand.<br><span class="text-cyan">A complete launch.</span></h1><p>Choose the next useful step for your business. We confirm suitability, scope and timing before work starts.</p><p class="fine-print">Prices in AUD · GST included where applicable · third-party fees quoted separately</p><div class="button-row"><a class="cta-button" href="/intake-form/?offer=website-fix-sprint">Request a website fix <span aria-hidden="true">↗</span></a></div><div class="jump-links" aria-label="Service sections"><a href="#small-jobs">Small jobs</a><a href="#websites">Websites</a><a href="#branding">Branding</a><a href="#care">Care plans</a><a href="#ai">AI persona</a></div></div></section>
+    <section class="section" id="small-jobs" aria-labelledby="small-title"><div class="container"><div class="section-heading"><div><span class="eyebrow">An easier place to start</span><h2 id="small-title">Small, useful projects.</h2></div><p class="muted">A focused job for an existing website or brand, with a defined delivery allowance.</p></div>
+      <div class="entry-grid">
+        <article class="offer-card" id="website-fix-sprint">
+          <div class="offer-top"><div><span class="eyebrow">For your existing website</span><h3>Website Fix Sprint</h3></div><div class="offer-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="17" rx="3"/><path d="M2 8h20M7 5.5h.01M10 5.5h.01M9 11l-3 3 3 3m6-6 3 3-3 3"/></svg></div></div>
+          <p>One agreed small issue on one supported website. A contained repair, with clear evidence of what changed.</p>
+          <div class="offer-price"><strong>$295</strong><span>one-time · scoped first</span></div>
+          <ul class="feature-list"><li>Examples: an incorrect call link, a contained mobile layout issue or a simple form configuration fix.</li><li>Up to two delivery hours, with relevant checks and before/after evidence.</li><li>One correction round within the agreed original scope.</li></ul>
+          <a class="cta-button" href="/intake-form/?offer=website-fix-sprint">Request a website fix <span aria-hidden="true">↗</span></a>
+          <p class="fine-print">Platform, access and feasibility confirmed before payment. Complex backend or email infrastructure, migrations, malware, new features and third-party faults need a separate quote.</p>
+        </article>
+        <article class="offer-card brand-offer" id="brand-polish">
+          <div class="offer-top"><div><span class="eyebrow">For your existing identity</span><h3>Brand Polish Pack</h3></div><div class="offer-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="3" width="19" height="18" rx="3"/><circle cx="8" cy="9" r="2"/><path d="M4 18l5-5 4 4 3-3 5 5M15 7h3M15 10h3"/></svg></div></div>
+          <p>Keep the identity you have. Make your everyday profile and cover assets look consistent and properly finished.</p>
+          <div class="offer-price"><strong>$495</strong><span>one-time · existing logo</span></div>
+          <ul class="feature-list"><li>One profile avatar and two agreed platform covers, sized for their destinations.</li><li>Colour and type styling sheet, plus organised platform-ready files.</li><li>One consolidated revision round, within four delivery hours.</li></ul>
+          <a class="cta-button" href="/intake-form/?offer=brand-polish">Request brand polish <span aria-hidden="true">↗</span></a>
+          <p class="fine-print">Supply a usable existing logo and assets you have rights to use. New logo concepts, naming, full strategy, print production and extra assets are separate projects.</p>
+        </article>
       </div>
-    </nav>
-    <section class="hero"><div class="container">
-        <h1 class="reveal">Websites, Branding &amp; AI Content</h1>
-        <p class="reveal reveal-d1">Professional digital solutions for Australian small business.</p>
-        <div class="model-banner reveal reveal-d2">One-time builds &middot; optional monthly care &middot; no lock-in</div>
-        <div class="jump-links reveal"><a href="#websites">Websites</a><a href="#branding">Branding</a><a href="#care">Care Plans</a><a href="#ai">AI Influencer</a></div>
+      <p class="scope-note"><strong>We check first.</strong> Tell us the issue or the assets you need. Once the platform, access and scope are confirmed, we agree payment and timing. Work outside the allowance is quoted separately before proceeding.</p>
     </div></section>
-    <section class="container"><span id="websites" class="section-anchor"></span><div class="section-head reveal"><h2>Websites</h2><p>Fast, professional sites built to convert. One-time build &mdash; the site is yours.</p></div>
-        <div class="services-grid">
-            <div class="service-card"><span class="service-badge badge-web">LAUNCH</span><h2>Launch</h2><p class="service-subtitle">Get online fast with a clean, professional presence</p><div class="pricing"><div class="price-main">$2,000</div><div class="price-note">One-time build</div></div><ul class="features-list"><li>Up to 5 pages</li><li>Mobile-responsive design</li><li>Basic SEO foundation</li><li>Contact form integration</li><li>CloudFlare hosting &amp; SSL</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 5-7 business days</span><a href="/intake-form/" class="cta-button">Get a Quote</a></div></div>
-            <div class="service-card most-popular"><span class="popular-tag">MOST POPULAR</span><span class="service-badge badge-web">BUSINESS</span><h2>Business</h2><p class="service-subtitle">A custom-designed site for businesses ready to grow</p><div class="pricing"><div class="price-main">$4,000</div><div class="price-note">One-time build</div></div><ul class="features-list"><li>Up to 10 pages</li><li>Custom design</li><li>Enhanced SEO setup</li><li>Lead-capture forms</li><li>Google Business Profile setup</li><li>CloudFlare hosting &amp; SSL</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 7-10 business days</span><a href="/intake-form/" class="cta-button">Get a Quote</a></div></div>
-            <div class="service-card"><span class="service-badge badge-web">PRO</span><h2>Pro</h2><p class="service-subtitle">Larger or eCommerce builds with advanced functionality</p><div class="pricing"><div class="price-main">$7,000</div><div class="price-note">One-time build</div></div><ul class="features-list"><li>15+ / fully custom pages</li><li>eCommerce ready</li><li>Advanced SEO</li><li>Third-party integrations</li><li>Performance optimisation</li><li>CloudFlare hosting &amp; SSL</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 2-3 weeks</span><a href="/intake-form/" class="cta-button">Get a Quote</a></div></div>
-        </div>
-        <div class="comparison-section"><div class="container"><h3>Website Plans Compared</h3><div class="table-wrapper"><table class="comparison-table"><thead><tr><th>Feature</th><th>Launch</th><th>Business</th><th>Pro</th></tr></thead><tbody><tr><td><strong>Price (one-time)</strong></td><td>$2,000</td><td>$4,000</td><td>$7,000</td></tr><tr><td><strong>Pages</strong></td><td>Up to 5</td><td>Up to 10</td><td>15+ / custom</td></tr><tr><td><strong>Design</strong></td><td>Template-based</td><td>Custom</td><td>Fully custom</td></tr><tr><td><strong>Mobile responsive</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr><tr><td><strong>SEO</strong></td><td>Basic</td><td>Enhanced</td><td>Advanced</td></tr><tr><td><strong>eCommerce</strong></td><td>-</td><td>Add-on</td><td>&#10003;</td></tr><tr><td><strong>CloudFlare hosting &amp; SSL</strong></td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr></tbody></table></div></div></div>
-    </section>
-    <section class="container"><span id="branding" class="section-anchor"></span><div class="section-head reveal"><h2>Branding</h2><p>Logos and brand systems that make a small business look established.</p></div>
-        <div class="services-grid">
-            <div class="service-card"><span class="service-badge badge-brand">LOGO ESSENTIALS</span><h2>Logo Essentials</h2><p class="service-subtitle">A clean, professional logo and the basics to use it</p><div class="pricing"><div class="price-main">$990</div><div class="price-note">One-time</div></div><ul class="features-list"><li>Primary logo + variations</li><li>Colour palette</li><li>Font pairing</li><li>File pack (SVG, PNG)</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 3-5 business days</span><a href="/intake-form/" class="cta-button">Get Started</a></div></div>
-            <div class="service-card most-popular"><span class="popular-tag">MOST POPULAR</span><span class="service-badge badge-brand">BRAND IDENTITY</span><h2>Brand Identity</h2><p class="service-subtitle">A complete identity system with guidelines</p><div class="pricing"><div class="price-main">$2,750</div><div class="price-note">One-time</div></div><ul class="features-list"><li>Everything in Logo Essentials</li><li>Full brand guidelines</li><li>Secondary marks &amp; icons</li><li>Social media kit</li><li>Stationery templates</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 1-2 weeks</span><a href="/intake-form/" class="cta-button">Get Started</a></div></div>
-            <div class="service-card"><span class="service-badge badge-brand">BRAND + LAUNCH</span><h2>Brand + Launch</h2><p class="service-subtitle">A full identity plus a website to launch it on</p><div class="pricing"><div class="price-main">$4,950</div><div class="price-note">One-time</div></div><ul class="features-list"><li>Full Brand Identity package</li><li>Business-tier website included</li><li>Social profile setup</li><li>Launch-ready asset pack</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 2-3 weeks</span><a href="/intake-form/" class="cta-button">Get Started</a></div></div>
-        </div>
-    </section>
-    <section class="care-section"><div class="container"><span id="care" class="section-anchor"></span><div class="section-head reveal"><h2>Care Plans</h2><p>Optional ongoing support. Month-to-month, cancel anytime &mdash; no lock-in.</p></div>
-            <div class="services-grid">
-                <div class="service-card"><span class="service-badge badge-care">CARE BASIC</span><h2>Care Basic</h2><p class="service-subtitle">Keep your site secure, backed up and online</p><div class="pricing"><div class="price-main">$99<span class="per-mo">/month</span></div><div class="price-note">Cancel anytime</div></div><ul class="features-list"><li>Hosting &amp; SSL monitoring</li><li>Security updates</li><li>Monthly backups</li><li>1 content update / month</li><li>Email support</li></ul><div class="card-footer"><a href="https://buy.stripe.com/00w6oJajGdQWduTdLX93y0g" class="cta-button">Add a Care Plan</a></div></div>
-                <div class="service-card most-popular"><span class="popular-tag">MOST POPULAR</span><span class="service-badge badge-care">CARE STANDARD</span><h2>Care Standard</h2><p class="service-subtitle">Regular updates and proactive monitoring</p><div class="pricing"><div class="price-main">$199<span class="per-mo">/month</span></div><div class="price-note">Cancel anytime</div></div><ul class="features-list"><li>Everything in Care Basic</li><li>3 content updates / month</li><li>Uptime monitoring</li><li>Performance checks</li><li>Priority email support</li></ul><div class="card-footer"><a href="https://buy.stripe.com/fZufZj77u8wC62reQ193y0h" class="cta-button">Add a Care Plan</a></div></div>
-                <div class="service-card"><span class="service-badge badge-care">CARE PLUS</span><h2>Care Plus</h2><p class="service-subtitle">Hands-on partner for an evolving site</p><div class="pricing"><div class="price-main">$399<span class="per-mo">/month</span></div><div class="price-note">Cancel anytime</div></div><ul class="features-list"><li>Everything in Care Standard</li><li>Unlimited minor updates</li><li>Monthly analytics report</li><li>Quarterly strategy review</li><li>Priority support</li></ul><div class="card-footer"><a href="https://buy.stripe.com/5kQbJ38by28e9eD0Zb93y0i" class="cta-button">Add a Care Plan</a></div></div>
-            </div>
-            <p class="care-note">Care plans are optional and never required to have us build your site. Start, pause or cancel anytime &mdash; there are no minimum terms and no cancellation fees.</p>
-        </div>
-    </section>
-    <section class="container"><p class="bundle-note">New to business? The <strong>New Business Launch</strong> bundle pairs Brand Identity with a Business website for roughly 10&ndash;15% less than booking them separately. <a href="#branding" class="bundle-link">See branding &rarr;</a></p></section>
-    <section class="ai-section"><div class="container"><span id="ai" class="section-anchor"></span>
-            <div class="section-header"><h2 class="section-title">AI Influencer Creation</h2><p class="section-intro">Create unique, AI-powered virtual influencers for your brand. Perfect for businesses wanting consistent, cost-effective social media presence without traditional influencer challenges.</p></div>
-            <div class="services-grid">
-                <div class="service-card"><span class="service-badge badge-ai">STARTER</span><h2>Single AI Persona</h2><p class="service-subtitle">Launch your first AI influencer with a consistent brand presence</p><div class="pricing"><div class="price-main">$499</div><div class="price-note">One-time creation fee</div></div><ul class="features-list"><li>1 custom AI influencer persona</li><li>Character backstory &amp; voice guide</li><li>10 AI-generated images</li><li>1 talking head video</li><li>Platform-ready assets (Instagram/Twitter)</li><li>Basic character style guide</li><li>Email support</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 3-5 business days</span><a href="https://buy.stripe.com/5kQ7sNbnK006gH59vH93y0f" class="cta-button cta-button-ai">Buy Now - $499</a></div></div>
-                <div class="service-card"><span class="service-badge badge-ai-pro">PROFESSIONAL</span><h2>Full Persona Package</h2><p class="service-subtitle">Complete AI influencer with expanded content library</p><div class="pricing"><div class="price-main">$999</div><div class="price-note">One-time creation fee</div></div><ul class="features-list"><li>1 custom AI influencer persona</li><li>Complete character backstory &amp; voice</li><li>30 AI-generated images</li><li>5 talking head videos</li><li>Multi-platform assets (IG, Twitter, TikTok)</li><li>Comprehensive style guide</li><li>Content calendar template</li><li>Priority support (24-hour)</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 5-7 business days</span><a href="https://buy.stripe.com/aFa00l8by14a0I78rD93y0e" class="cta-button cta-button-ai">Buy Now - $999</a></div></div>
-                <div class="service-card"><span class="service-badge badge-ai-enterprise">ENTERPRISE</span><h2>Multi-Persona Strategy</h2><p class="service-subtitle">Build an AI influencer network targeting different audiences</p><div class="pricing"><div class="price-main">$1,999</div><div class="price-note">One-time creation fee</div></div><ul class="features-list"><li>Up to 3 AI influencer personas</li><li>Unique visual style per persona</li><li>50+ AI-generated images total</li><li>10 talking head videos</li><li>Cross-promotion strategy document</li><li>All platform assets included</li><li>Competitor analysis included</li><li>VIP support (4-hour response)</li><li>1 revision round included</li></ul><div class="card-footer"><span class="delivery-tag">Delivery: 7-10 business days</span><a href="https://buy.stripe.com/28EbJ3bnK00662r8rD93y0d" class="cta-button cta-button-ai">Buy Now - $1,999</a></div></div>
-            </div>
-            <div class="section-link"><a href="/services/ai-influencer/">Learn more about AI Influencer Creation &rarr;</a></div>
-        </div>
-    </section>
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-brand"><img src="/assets/ft-digital-icon.svg" alt=""><span class="fwm">FLOWTECH&nbsp;<span class="wm-suffix">DIGITAL</span></span></div>
-        <p>&copy; 2026 FlowTech Digital.<br><span style="white-space:nowrap">ABN 76 689 878 420</span></p>
-        <p><a href="/privacy/">Privacy</a> | <a href="/terms/">Terms</a></p>
-        <p style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem .7rem"><a href="mailto:hello@flowtechdigital.com.au" style="white-space:nowrap">hello@flowtechdigital.com.au</a><a href="tel:+61477482827" style="white-space:nowrap">0477 482 827</a></p>
+    <section class="section" id="websites" aria-labelledby="websites-title"><div class="container"><div class="section-heading"><div><span class="eyebrow">A complete website</span><h2 id="websites-title">Build once.<br>Make it your own.</h2></div><p class="muted">Clear pages, mobile-responsive layouts and an enquiry route suited to your business.</p></div><div class="package-grid">
+      <article class="package-card"><span class="eyebrow">Launch</span><h3>Launch</h3><p class="package-desc">A clean first website for a small business.</p><p class="price"><span class="from">from </span>$2,000</p><p class="price-note">One-time website build</p><ul class="feature-list"><li>Up to five pages</li><li>Template-based design, adapted to your identity</li><li>Mobile-responsive layout</li><li>Basic SEO foundations</li><li>Contact form integration</li><li>Cloudflare hosting setup and SSL</li></ul><p class="time-note">Typical build: 5–7 business days</p><a class="cta-button" href="/intake-form/?offer=launch">Enquire about Launch <span aria-hidden="true">↗</span></a></article><article class="package-card"><span class="eyebrow">Business</span><h3>Business</h3><p class="package-desc">A custom site with room to explain your services.</p><p class="price"><span class="from">from </span>$4,000</p><p class="price-note">One-time website build</p><ul class="feature-list"><li>Up to ten pages</li><li>Custom design</li><li>Enhanced SEO setup</li><li>Lead-capture forms</li><li>Google Business Profile setup</li><li>Cloudflare hosting setup and SSL</li></ul><p class="time-note">Typical build: 7–10 business days</p><a class="cta-button" href="/intake-form/?offer=business">Enquire about Business <span aria-hidden="true">↗</span></a></article><article class="package-card"><span class="eyebrow">Pro</span><h3>Pro</h3><p class="package-desc">Larger custom sites and more involved functionality.</p><p class="price"><span class="from">from </span>$7,000</p><p class="price-note">One-time website build</p><ul class="feature-list"><li>Custom page structure, scoped to the project</li><li>eCommerce capability, where agreed</li><li>Third-party integrations, scoped first</li><li>Advanced SEO setup</li><li>Performance optimisation</li><li>Cloudflare hosting setup and SSL</li></ul><p class="time-note">Typical build: 2–3 weeks</p><a class="cta-button" href="/intake-form/?offer=pro">Enquire about Pro <span aria-hidden="true">↗</span></a></article>
+    </div><p class="section-footnote">Build windows are indicative, starting after scope approval and receipt of required content and access. Your written quote confirms pages, functionality, revisions and delivery. You own the commissioned work after full payment; licensed tools and third-party assets remain subject to their terms. Domains, paid hosting tiers, plugins and other third-party fees are identified separately.</p></div></section>
+    <section class="section" id="branding" aria-labelledby="branding-title"><div class="container"><div class="section-heading"><div><span class="eyebrow">For a new identity</span><h2 id="branding-title">Give your business<br>a consistent foundation.</h2></div><p class="muted">New logo and identity projects, from the essentials to a coordinated website launch.</p></div><div class="package-grid">
+      <article class="package-card"><span class="eyebrow">Logo Essentials</span><h3>Logo Essentials</h3><p class="package-desc">A new logo and the essentials to use it.</p><p class="price"><span class="from">from </span>$990</p><p class="price-note">One-time project</p><ul class="feature-list"><li>Primary logo and variations</li><li>Colour palette</li><li>Font pairing</li><li>Organised SVG and PNG file pack</li></ul><p class="time-note">Typical project: 3–5 business days</p><a class="cta-button" href="/intake-form/?offer=logo-essentials">Enquire about Logo Essentials <span aria-hidden="true">↗</span></a></article><article class="package-card"><span class="eyebrow">Brand Identity</span><h3>Brand Identity</h3><p class="package-desc">A complete identity with a practical visual system.</p><p class="price"><span class="from">from </span>$2,750</p><p class="price-note">One-time project</p><ul class="feature-list"><li>Everything in Logo Essentials</li><li>Full brand guidelines</li><li>Secondary marks and icons</li><li>Social media kit</li><li>Stationery templates</li></ul><p class="time-note">Typical project: 1–2 weeks</p><a class="cta-button" href="/intake-form/?offer=brand-identity">Enquire about Brand Identity <span aria-hidden="true">↗</span></a></article><article class="package-card"><span class="eyebrow">Brand + Launch</span><h3>Brand + Launch</h3><p class="package-desc">A coordinated identity and website launch.</p><p class="price"><span class="from">from </span>$4,950</p><p class="price-note">One-time project</p><ul class="feature-list"><li>Full Brand Identity package</li><li>Business-tier website</li><li>Social profile setup</li><li>Launch-ready asset pack</li></ul><p class="time-note">Typical project: 2–3 weeks</p><a class="cta-button" href="/intake-form/?offer=brand-launch">Enquire about Brand + Launch <span aria-hidden="true">↗</span></a></article>
+    </div><div class="bundle-note"><p><strong>Brand + Launch combines Brand Identity and a Business website for $4,950.</strong> At the listed starting prices, the separate packages total $6,750 — a saving of $1,800 (26.7%). Final inclusions and price are confirmed in your quote.</p><a class="text-link" href="/intake-form/?offer=brand-launch">Discuss the bundle <span aria-hidden="true">→</span></a></div><p class="section-footnote">Brand project windows are indicative after the brief and source materials are received. Concepts, revision rounds and final file formats are agreed in writing. Supplied logos, images and other assets must be owned or licensed by you.</p></div></section>
+    <section class="section care-section" id="care" aria-labelledby="care-title"><div class="container"><div class="section-heading"><div><span class="eyebrow">Optional ongoing care</span><h2 id="care-title">Keep the site<br>you have in good order.</h2></div><p class="muted">Monthly support for an eligible existing platform. No lock-in; suitability is checked before a plan starts.</p></div><div class="package-grid">
+      <article class="package-card"><span class="eyebrow">Month-to-month</span><h3>Care Basic</h3><p class="package-desc">Baseline maintenance with a small content allowance.</p><p class="price">$99<span class="per-mo"> / month</span></p><p class="price-note">Optional · no minimum term</p><ul class="feature-list"><li>Hosting and SSL monitoring</li><li>Applicable security updates</li><li>Monthly backups</li><li>One content request, up to 20 minutes total per month</li><li>Email support</li></ul><a class="cta-button secondary" href="/intake-form/?offer=care-basic">Enquire about Care Basic <span aria-hidden="true">↗</span></a></article><article class="package-card"><span class="eyebrow">Month-to-month</span><h3>Care Standard</h3><p class="package-desc">Regular content support and proactive checks.</p><p class="price">$199<span class="per-mo"> / month</span></p><p class="price-note">Optional · no minimum term</p><ul class="feature-list"><li>Care Basic maintenance</li><li>Uptime monitoring and performance checks</li><li>Up to three content requests, within 60 minutes total per month</li><li>Priority email support</li></ul><a class="cta-button secondary" href="/intake-form/?offer=care-standard">Enquire about Care Standard <span aria-hidden="true">↗</span></a></article><article class="package-card"><span class="eyebrow">Month-to-month</span><h3>Care Plus</h3><p class="package-desc">A larger allowance for an evolving website.</p><p class="price">$399<span class="per-mo"> / month</span></p><p class="price-note">Optional · no minimum term</p><ul class="feature-list"><li>Care Standard maintenance and monitoring</li><li>Minor content requests, within 120 minutes total per month</li><li>Monthly analytics report, where tracking is configured</li><li>Quarterly strategy review</li><li>Priority support</li></ul><a class="cta-button secondary" href="/intake-form/?offer=care-plus">Enquire about Care Plus <span aria-hidden="true">↗</span></a></article>
+    </div><p class="section-footnote">Content allowances cover edits to existing text, images and contact details, separate from the listed maintenance and monitoring. Unused time does not roll over. New pages, features, integrations, incidents and larger design changes are quoted separately before work. Support availability, access and platform requirements are confirmed at acceptance. Start, pause or cancel month-to-month without cancellation fees; third-party subscriptions follow their own terms.</p></div></section>
+    <section class="section" aria-labelledby="questions-title"><div class="container"><div class="section-heading"><div><span class="eyebrow">Before you enquire</span><h2 id="questions-title">A few practical answers.</h2></div></div><div class="faq-grid"><details><summary>Can you work on my existing website?</summary><p>Often, yes. Send the website address and the issue. We check its platform, access and whether the work fits before accepting the job. A platform or third-party limitation may require a different scope.</p></details><details><summary>What if a small fix becomes a bigger job?</summary><p>We stop at the agreed boundary and explain what is needed. Any additional work or charge needs a separate approved quote.</p></details><details><summary>Does Brand Polish include a new logo?</summary><p>Brand Polish uses your existing, usable identity. If you need a new logo or broader strategy, Logo Essentials or Brand Identity is the more appropriate starting point.</p></details><details><summary>Do I have to buy monthly care?</summary><p>No. Care is optional. A one-time website build does not require an ongoing care plan. Your quote makes hosting arrangements and third-party costs clear.</p></details><details><summary>When do I pay?</summary><p>We check suitability and agree the work first. Small jobs are paid in advance after scope confirmation. Larger project milestones and payment terms are set out in your quote.</p></details><details><summary>Can you guarantee enquiries or sales?</summary><p>No. We deliver the agreed design or technical work and its relevant checks. Customer demand, traffic and your business operations also affect results.</p></details></div></div></section>
+    <section class="section" id="ai" aria-labelledby="ai-title"><div class="container"><div class="ai-summary"><div><span class="eyebrow">An additional creative service</span><h3 id="ai-title">AI persona creation</h3><p>Custom virtual brand personas and platform-ready content assets. Existing packages start at $499; explore the separate service page for inclusions and options.</p></div><a class="cta-button secondary" href="/services/ai-influencer/">Explore AI personas <span aria-hidden="true">→</span></a></div></div></section>
+    <section class="closing" aria-labelledby="closing-title"><div class="container closing-grid"><div><h2 id="closing-title">Not sure which service fits?</h2><p>Tell us the goal and we’ll confirm the appropriate scope.</p></div><a class="cta-button" href="/intake-form/">Start a short enquiry <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-main">
+        <div><a class="footer-brand" href="/" aria-label="FlowTech Digital home" style="text-decoration:none;color:inherit"><img src="/assets/ft-digital-icon.svg" alt="" width="35" height="35"><span class="fwm">FLOWTECH <span class="wm-suffix">DIGITAL</span></span></a><p class="footer-tag">Show Up · Stand Out · Convert</p></div>
+        <div class="footer-contact"><a href="mailto:hello@flowtechdigital.com.au">hello@flowtechdigital.com.au</a><a href="tel:+61477482827">0477 482 827</a><a href="https://www.youtube.com/@FlowTechDigital" target="_blank" rel="noopener">FlowTech on YouTube ↗</a></div>
       </div>
-    </footer>
-<script>
-(function(){
-  var els=document.querySelectorAll('.reveal');
-  if(!els.length)return;
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-  },{threshold:.12});
-  els.forEach(function(el){io.observe(el);});
-  window.addEventListener('load',function(){
-    document.querySelectorAll('.hero .reveal, .hero-content .reveal, .form-container .reveal, .content .reveal, .contact-hero .reveal, .contact-wrap .reveal').forEach(function(el,i){
-      el.style.transitionDelay=(i*0.07)+'s';el.classList.add('in');
-    });
-  });
-})();
-</script>
-<script>
-const toggle=document.querySelector('.nav-toggle');
-const mlinks=document.querySelector('.nav-links');
-const navEl=document.querySelector('nav');
-const setNavH=()=>document.documentElement.style.setProperty('--nav-h',navEl.offsetHeight+'px');
-setNavH();window.addEventListener('resize',setNavH);
-if(toggle){
-  toggle.addEventListener('click',()=>{
-    const open=toggle.classList.toggle('open');
-    mlinks.classList.toggle('open');
-    toggle.setAttribute('aria-expanded',open);
-    document.body.style.overflow=open?'hidden':'';
-  });
-  mlinks.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click',()=>{
-      toggle.classList.remove('open');mlinks.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-      document.body.style.overflow='';
-    });
-  });
-}
-</script>
+      <div class="footer-base"><p>© 2026 FlowTech Digital · ABN 76 689 878 420</p><div class="footer-legal"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div></div>
+    </div>
+  </footer>
 </body>
 </html>

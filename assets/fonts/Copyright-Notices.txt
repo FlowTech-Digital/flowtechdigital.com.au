@@ -1,0 +1,9 @@
+FONT COPYRIGHT NOTICES
+
+IBM Plex Sans (assets/Plex.ttf and demo/Plex.ttf):
+Copyright 2019 IBM Corp. All rights reserved.
+SIL Open Font License Version 1.1. Full text: IBM_Plex_Sans_OFL.txt
+
+Michroma (assets/Michroma.ttf):
+Copyright 2011 The Michroma Project Authors (https://github.com/googlefonts/Michroma-font)
+SIL Open Font License Version 1.1. Full text: Michroma_OFL.txt

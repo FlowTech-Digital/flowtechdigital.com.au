@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKCSTGFCJH"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YKCSTGFCJH',{'send_page_view':true});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YKCSTGFCJH',{'send_page_view':true,'page_location':window.location.origin+window.location.pathname});</script>
   <title>404 &mdash; Page not found - FlowTech Digital</title>
   <meta name="description" content="That page doesn't exist or has moved. Head back to the FlowTech Digital homepage or browse our services.">
   <meta name="robots" content="noindex">
@@ -12,8 +12,8 @@
   <link rel="icon" type="image/png" sizes="48x48" href="/favicons/favicon-48x48.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
   <meta name="theme-color" content="#1E78FF">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
+
+
   <style>
     :root{--ft-azure:#1E78FF;--ft-cyan:#38CFFF;--ft-obsidian:#0B1114;--ft-ink:#1A2230;--ft-slate:#5B6675;--ft-mist:#E7ECF2;--ft-indigo:#0A3D91;--ft-white:#FFFFFF;--ft-gray-light:#F5F5F5;--ft-font-primary:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--ft-font-heading:'IBM Plex Sans',var(--ft-font-primary)}
     *{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--ft-font-primary);background-color:var(--ft-obsidian);color:var(--ft-white);line-height:1.6}
@@ -33,9 +33,12 @@
     body{animation:pageIn .5s ease}@keyframes pageIn{from{opacity:0}to{opacity:1}}
     @media(prefers-reduced-motion:reduce){body{animation:none}}
   </style>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/site.js" defer></script>
 </head>
 <body>
-  <nav>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav aria-label="Main navigation">
     <div class="nav-content">
       <a href="/" class="nav-logo"><img src="/assets/ft-digital-icon.svg" alt="FlowTech Digital" class="nav-mark"><span class="nav-wm">FLOWTECH&nbsp;<span class="wm-suffix">DIGITAL</span></span></a>
       <ul class="nav-links">
@@ -46,7 +49,7 @@
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
     </div>
   </nav>
-  <main class="hero">
+  <main id="main-content" class="hero">
     <div class="hero-content">
       <div class="err-code">404</div>
       <h1>404 &mdash; Page not found</h1>
@@ -65,27 +68,6 @@
       <p style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem .7rem"><a href="mailto:hello@flowtechdigital.com.au" style="white-space:nowrap">hello@flowtechdigital.com.au</a><a href="tel:+61477482827" style="white-space:nowrap">0477 482 827</a></p>
     </div>
   </footer>
-<script>
-const toggle=document.querySelector('.nav-toggle');
-const mlinks=document.querySelector('.nav-links');
-const navEl=document.querySelector('nav');
-const setNavH=()=>document.documentElement.style.setProperty('--nav-h',navEl.offsetHeight+'px');
-setNavH();window.addEventListener('resize',setNavH);
-if(toggle){
-  toggle.addEventListener('click',()=>{
-    const open=toggle.classList.toggle('open');
-    mlinks.classList.toggle('open');
-    toggle.setAttribute('aria-expanded',open);
-    document.body.style.overflow=open?'hidden':'';
-  });
-  mlinks.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click',()=>{
-      toggle.classList.remove('open');mlinks.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-      document.body.style.overflow='';
-    });
-  });
-}
-</script>
+
 </body>
 </html>

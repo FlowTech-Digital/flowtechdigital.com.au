@@ -6,7 +6,12 @@ on:
   workflow_dispatch:
 
 jobs:
+  checks:
+    uses: ./.github/workflows/site-checks.yml
+
   deploy:
+    needs: checks
+    if: github.ref == 'refs/heads/main' && needs.checks.result == 'success'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -15,13 +20,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build public website
+        run: python tools/build_site.py
       
       - name: Deploy to CloudFlare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy . --project-name=flowtechdigital-com-au --commit-dirty=true
+          command: pages deploy site-dist --project-name=flowtechdigital-com-au --branch=main --commit-dirty=true
       
       - name: Deployment Summary
         run: |
