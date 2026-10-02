@@ -1,0 +1,13 @@
+{
+  "name": "flowtech-digital-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website build and automated browser checks for FlowTech Digital",
+  "scripts": {
+    "build": "python tools/build_site.py",
+    "test": "node tools/check_site.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
