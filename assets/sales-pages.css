@@ -19,3 +19,6 @@ footer{padding:42px 0 24px;background:#0A1014;border-top:1px solid var(--line)}.
 @media(max-width:860px){.sales-hero{padding-top:calc(var(--nav-h,78px) + 44px)}.services-hero{padding-top:calc(var(--nav-h,78px) + 40px)}}
 /* Darker action blue keeps normal-sized white button text above 4.5:1. */
 .cta-button{background:#1764D8}.cta-button:hover{background:#1455BA}.cta-button.secondary{background:transparent}.cta-button.secondary:hover{background:#142633}
+
+.proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}.proof-project{display:flex;flex-direction:column;align-items:flex-start}.proof-project>.text-link{margin-top:auto}.proof-project>p{max-width:50ch}.tutorial-note{max-width:600px}
+@media(max-width:650px){.proof-grid{grid-template-columns:1fr}}
