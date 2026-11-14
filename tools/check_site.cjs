@@ -53,6 +53,7 @@ let browser;
         const critical = [...document.querySelectorAll('h1,.nav-logo,.nav-toggle,footer a,main button,main input:not([type=hidden]),main select,main textarea')].filter(el => el.getClientRects().length && getComputedStyle(el).display !== 'none');
         return {
           title:document.title, h1:document.querySelectorAll('h1').length,
+          canonicals:[...document.querySelectorAll('link[rel=canonical]')].map(el=>el.href),
           pageWidth:document.documentElement.clientWidth, scrollWidth:document.documentElement.scrollWidth,
           clipped:critical.map(el => ({ tag:el.tagName, label:el.textContent.trim().slice(0,60), rect:el.getBoundingClientRect().toJSON() })).filter(r => r.rect.left < -1 || r.rect.right > innerWidth + 1),
           brokenImages:[...document.images].filter(i => !i.complete || i.naturalWidth === 0).map(i => i.getAttribute('src')),
@@ -62,6 +63,7 @@ let browser;
         };
       });
       assert.equal(result.h1,1, `One heading: ${route}`);
+      if (route !== '/404.html') assert.deepEqual(result.canonicals,['https://flowtechdigital.com.au'+route],`Canonical URL: ${route}`);
       assert.ok(result.main && result.title && result.fontLoaded, `Content/font: ${route}`);
       assert.ok(result.scrollWidth <= width+1 && !result.clipped.length, `Overflow ${width} ${route}: ${JSON.stringify(result.clipped)}`);
       assert.deepEqual(result.brokenImages,[],`Images: ${route}`);
