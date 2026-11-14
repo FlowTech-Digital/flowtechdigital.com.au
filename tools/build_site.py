@@ -95,6 +95,32 @@ def main() -> None:
         target = DESTINATION / source.relative_to(ROOT)
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
+    # Public URLs are normalised here so every published content page declares
+    # the same preferred host and trailing-slash route, including legacy pages.
+    for page in DESTINATION.rglob("*.html"):
+        relative = page.relative_to(DESTINATION).as_posix()
+        if relative == "404.html":
+            continue
+        route = "/" + relative.removesuffix("index.html")
+        canonical = "https://flowtechdigital.com.au" + route
+        document = page.read_text(encoding="utf-8")
+        tags = re.findall(r'<link\b[^>]*rel=[\"\']canonical[\"\'][^>]*>', document, re.I)
+        if len(tags) > 1:
+            raise ValueError(f"Duplicate canonical tags: {relative}")
+        tag = f'<link rel="canonical" href="{canonical}">'
+        if tags:
+            document = document.replace(tags[0], tag, 1)
+        else:
+            if "</head>" not in document:
+                raise ValueError(f"Missing document head: {relative}")
+            document = document.replace("</head>", f"  {tag}\n</head>", 1)
+        page.write_text(document, encoding="utf-8")
+
+    # Last-modified dates are optional. Do not publish old, unmaintained dates
+    # as if they describe newer website releases.
+    sitemap = DESTINATION / "sitemap.xml"
+    sitemap.write_text(re.sub(r"\s*<lastmod>[^<]*</lastmod>", "",
+                             sitemap.read_text(encoding="utf-8")), encoding="utf-8")
     print(f"Built {len(selected)} public files in {DESTINATION.name}")
 
 
